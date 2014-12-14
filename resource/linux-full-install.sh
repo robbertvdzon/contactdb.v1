@@ -30,13 +30,11 @@ useradd devel
 echo -e "devel\ndevel" | (passwd devel)
 adduser devel sudo
 
-cd /workspace/msw-frontend
-git config credential.helper store
-cd /workspace/msw-backend
+cd /workspace/contactdb.v1
 git config credential.helper store
 
 rm -rf /var/www
-ln -s /workspace/msw-frontend/app /var/www
+ln -s /workspace/contactdb.v1/useless-frontend/app /var/www
 
 a2enmod proxy proxy_http
 
@@ -63,10 +61,9 @@ a2ensite phpmyadmin
 # restart apache
 service apache2 restart
 
-unzip -o /workspace/msw-backend/mswdb.zip -d /tmp
-mysql -u root --password=admin < /tmp/msw.sql
+mysql -u root --password=admin < /workspace/contactdb.v1/resources/contact.sql
 
-/workspace/msw-backend/wildfly-install.sh
+/workspace/contactdb.v1/resources/wildfly-install.sh
 # update rc.d (script doesn’t do that which makes wildfly not being started at boot time
 update-rc.d wildfly defaults
 
@@ -108,9 +105,9 @@ sed -i 's/datasource="java:jboss\/datasources\/ExampleDS"/datasource="java:jboss
 service wildfly start
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
-cd /workspace/msw-backend
+cd /workspace/contactdb.v1/useless-backend
 mvn install
-cp /workspace/msw-backend/target/*.war /opt/wildfly/standalone/deployments
+cp /workspace/contactdb.v1/useless-backend/target/*.war /opt/wildfly/standalone/deployments
 # tail -f /var/log/wildfly/console.log
 
 

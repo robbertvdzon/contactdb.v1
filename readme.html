@@ -1,4 +1,108 @@
-useless-app-playground
-======================
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
 
-speeltuin voor useless-app
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  </head>
+  <body>
+    <u><b>Shortcuts:</b></u><u><b><br>
+      </b></u><br>
+    server commands:<br>
+    tail -f /var/log/wildfly/console.log<br>
+    <br>
+    /opt/wildfly/bin/jboss-cli.sh --connect --controller=localhost:9990<br>
+    deploy --force
+    /workspace/msw-backend/target/mswbackend-1.0-SNAPSHOT.war<br>
+    <br>
+    service wildfly restart<br>
+    <br>
+    handige links:<br>
+    main server: 128.199.36.11<br>
+    test server:128.199.33.12<br>
+    <br>
+    phpmyadmin: http://128.199.36.11:888<br>
+    mysql passwd: 12Iw&nbsp; (zonder _msw)<br>
+    wildfly: http://128.199.36.11:28080/<br>
+    wildfly: http://128.199.36.11:9990&nbsp; (user=admin/passwd=admin
+    /&nbsp; lokaal is het passwd: admin)<br>
+    app base: http://128.199.36.11:28080/mswbackend-1.0-SNAPSHOT<br>
+    <br>
+    <br>
+    <u><b>Installatie op server:</b></u><u><b><br>
+      </b></u><br>
+      cd /tmp<br>
+      wget https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/resources/linux-full-install.sh
+      <br>
+      sh /tmp/linux-full-install.sh > /tmp/install.log 2>&1 &
+<br>
+of:<br>
+    apt-get install git<br>
+    mkdir /workspace<br>
+    chmod a+rwx /workspace<br>
+    cd /workspace<br>
+    git clone https://github.com/robbertvdzon/contactdb.v1.git<br>
+    <br>
+    Run de rest automatisch met script:<br>
+    /workspace/contactdb.v1/resources/linux-full-install.sh<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <u><b>Install bower en angular:</b></u><br>
+    su -<br>
+    npm install --global yo bower grunt-cli<br>
+    npm install --global generator-angular@0.9.2<br>
+    su robbert<br>
+    yo --version &amp;&amp; bower --version &amp;&amp; grunt --version<br>
+    <br>
+    <br>
+    Install nodejs:<br>
+    mkdir ~/src &amp;&amp; cd $_<br>
+    wget -N http://nodejs.org/dist/node-latest.tar.gz<br>
+    tar xzvf node-latest.tar.gz &amp;&amp; cd node-v*<br>
+    ./configure<br>
+    checkinstall&nbsp;&nbsp; #remove the "v" in front of the version
+    number in the dialog!<br>
+    dpkg -i node_*<br>
+    <br>
+    Build frontend:<br>
+    su robbert<br>
+    cd /workspace/msw-frontend<br>
+    bower install<br>
+    <br>
+    <br>
+    <br>
+    Een tweede test op poort 88 maken:<br>
+    su -<br>
+    vi /etc/apache2/ports.conf<br>
+    add below Listen 80<br>
+    Listen 88<br>
+    vi /etc/apache2/sites-available/test<br>
+    <br>
+    &lt;VirtualHost *:88&gt;<br>
+    ServerName test<br>
+    DocumentRoot /workspace/msw-frontend/app<br>
+    ProxyPass /api/
+    http://localhost:28080/mswbackend-1.0-SNAPSHOT/resources/<br>
+    ProxyPassReverse /api/
+    http://localhost:28080/mswbackend-1.0-SNAPSHOT/resources/<br>
+    &lt;/VirtualHost&gt;<br>
+    <br>
+    a2ensite test<br>
+    <br>
+    <br>
+    <br>
+    Ontwikkel machine configuratie<br>
+    <br>
+    Intellij install:<br>
+    Download cummunity edition<br>
+    Download plugin:<br>
+    open settings<br>
+    ga naar plugins<br>
+    <br>
+    <br>
+    Wildfly:<br>
+    download wildfly zip file en unzip in c:\apps<br>
+    <br>
+  </body>
+</html>

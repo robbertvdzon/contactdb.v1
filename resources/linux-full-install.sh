@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install git and clone the sources and scripts
-apt-get install git
+apt-get -y install git
 mkdir /workspace
 chmod a+rwx /workspace
 cd /workspace
@@ -44,7 +44,7 @@ cd /workspace/contactdb.v1
 git config credential.helper store
 
 rm -rf /var/www
-ln -s /workspace/contactdb.v1/useless-frontend/app /var/www
+ln -s /workspace/contactdb.v1/useless_frontend/app /var/www
 
 a2enmod proxy proxy_http
 
@@ -73,7 +73,8 @@ service apache2 restart
 
 mysql -u root --password=admin < /workspace/contactdb.v1/resources/contact.sql
 
-/workspace/contactdb.v1/resources/wildfly-install.sh
+
+sh /workspace/contactdb.v1/resources/wildfly-install.sh
 # update rc.d (script doesn’t do that which makes wildfly not being started at boot time
 update-rc.d wildfly defaults
 
@@ -115,9 +116,9 @@ sed -i 's/datasource="java:jboss\/datasources\/ExampleDS"/datasource="java:jboss
 service wildfly start
 
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/jre
-cd /workspace/contactdb.v1/useless-backend
+cd /workspace/contactdb.v1/useless_backend
 mvn install
-cp /workspace/contactdb.v1/useless-backend/target/*.war /opt/wildfly/standalone/deployments
+cp /workspace/contactdb.v1/useless_backend/target/*.war /opt/wildfly/standalone/deployments
 # tail -f /var/log/wildfly/console.log
 
 

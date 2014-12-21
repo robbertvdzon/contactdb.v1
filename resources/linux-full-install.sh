@@ -49,8 +49,8 @@ ln -s /workspace/contactdb.v1/useless_frontend/app /var/www
 a2enmod proxy proxy_http
 
 rm -f /tmp/add.txt
-echo 'ProxyPass /api http://localhost:28080/mswbackend-1.0-SNAPSHOT' >> /tmp/add.txt
-echo 'ProxyPassReverse /api http://localhost:28080/mswbackend-1.0-SNAPSHOT' >> /tmp/add.txt
+echo 'ProxyPass /api http://localhost:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
+echo 'ProxyPassReverse /api http://localhost:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
 sed  -i '/<VirtualHost/r /tmp/add.txt' /etc/apache2/sites-available/default
 service apache2 restart
 
@@ -93,7 +93,7 @@ service wildfly stop
 # add the mySQL jdbc configuration
 rm -f /tmp/add.txt
 echo ' <datasource jta="false" jndi-name="java:jboss/datasources/MySQLDS" pool-name="MySQLDS" enabled="true" use-ccm="false">' >> /tmp/add.txt
-echo '                    <connection-url>jdbc:mysql://localhost:3306/msw</connection-url>' >> /tmp/add.txt
+echo '                    <connection-url>jdbc:mysql://localhost:3306/contact</connection-url>' >> /tmp/add.txt
 echo '                    <driver-class>com.mysql.jdbc.Driver</driver-class>' >> /tmp/add.txt
 echo '                    <driver>mysql-connector-java-5.1.16.jar</driver>' >> /tmp/add.txt
 echo '                    <security>' >> /tmp/add.txt

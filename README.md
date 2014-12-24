@@ -9,8 +9,8 @@
 
 
 **server commands:**  
-`tail -f /var/log/wildfly/console.log`  
-`service wildfly restart`
+`tail -f /var/log/wildfly/console.log  
+service wildfly restart`
   
 **server adresses:**  
 phpmyadmin: http://[ip]:888  

@@ -18,7 +18,7 @@ wildfly console: http://[ip]:9990  (user=admin/passwd=admin /  lokaal is het pas
   
 **Installatie op server:**  
 `cd /tmp`  
-`wget https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/resources/linux-full-install.sh` 
+`wget https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/resources/linux-full-install.sh`  
 `sh /tmp/linux-full-install.sh > /tmp/install.log 2>&1 &`   
   
 

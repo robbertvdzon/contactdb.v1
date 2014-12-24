@@ -1,10 +1,5 @@
 #Workshop: Building a contact database 
-### Using:
-### - JEE7
-### - Java8
-### - Wildfly
-### - MySQL
-### - AngularJS
+### Using: JEE7, Java8, Wildfly, MySQL, AngularJS
 -----------
 
 

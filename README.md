@@ -9,7 +9,7 @@
 
 
 **server commands:**  
-`tail -f /var/log/wildfly/console.log`
+`tail -f /var/log/wildfly/console.log`  
 `service wildfly restart`
   
 **server adresses:**  

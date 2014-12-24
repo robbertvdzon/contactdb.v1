@@ -27,7 +27,7 @@ Building a contact databse
 tail -f /var/log/wildfly/console.log
   
 /opt/wildfly/bin/jboss-cli.sh --connect --controller=localhost:9990
-deploy --force /workspace/msw-backend/target/mswbackend-1.0-SNAPSHOT.war
+deploy --force /workspace/msw-backend/target/mswbackend-1.0-SNAPSHOT.war  
   
 service wildfly restart
   

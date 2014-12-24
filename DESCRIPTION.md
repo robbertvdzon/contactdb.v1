@@ -1,8 +1,3 @@
-Building a contact databse
------------ 
-### Using:
-### - JEE7
-### - Java8
-### - Wildfly
-### - MySQL
-### - AngularJS
+#Workshop: Building a contact database 
+### Using: JEE7, Java8, Wildfly, MySQL, AngularJS
+Complete workshop for setting up a develop syste, developing a contact database and deployment to a linux server in the cloud...

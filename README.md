@@ -1,6 +1,8 @@
 #Workshop: Building a contact database 
 ### Using: JEE7, Java8, Wildfly, MySQL, AngularJS
 -----------
+Complete workshop for setting up a develop syste, developing a contact database and deployment to a linux server in the cloud...  
+  
   
 **Installatie op debian server:**  
 `cd /tmp`  
@@ -9,10 +11,10 @@
   
 **easy server commands and urls:**  
 `tail -f /var/log/wildfly/console.log`  
-`service wildfly restart`
+`service wildfly restart`  
 phpmyadmin: http://[ip]:888  
 wildfly console: http://[ip]:9990  (user=admin/passwd=admin /  lokaal is het passwd: admin)  
-
+  
 **Install bower en angular:**  
 `su - `   
 `npm install --global yo bower grunt-cli`   

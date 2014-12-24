@@ -6,21 +6,10 @@ Building a contact databse
  
 ### Using:
 ### - JEE7
-### - Java8
-### - Wildfly
-### - MySQL
-### - AngularJS
-
- 
- Paragraphs are separated
- by a blank line.
- 
- Let 2 spaces at the end of a line to do a  
- line break
- 
- Text attributes *italic*,
- **bold**, `monospace`,~~monospace~~, `monospace` .
- 
+## - Java8
+## - Wildfly
+# - MySQL
+# - AngularJS
 
 
 *server commands:*

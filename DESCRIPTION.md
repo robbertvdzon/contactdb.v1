@@ -1,3 +1,8 @@
-JEE7, Java8, en andere leuke dingen
-=======
-Setup werk omgeving, code bouwen en instalatie op server
+Building a contact databse
+----------- 
+### Using:
+### - JEE7
+### - Java8
+### - Wildfly
+### - MySQL
+### - AngularJS

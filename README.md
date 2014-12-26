@@ -36,8 +36,6 @@ Todo:
     -- source: Authentication  
     -- source: Angular
 
--    
-
 Step 1: Setting up devel system and server
 ------------------------------------------
 

@@ -5,10 +5,10 @@
 ### Using: JEE7, Java8, Wildfly, MySQL, AngularJS
 ### note: this project is work-in-progress !!! 
 -----------
-**Description:**  
+##Description:  
 Complete workshop for setting up a develop systes, developing a contact database and deployment to a linux server in the cloud...  
   
-# Still Todo: #
+## Still Todo: #
 
 - async code
 - login beter
@@ -26,7 +26,7 @@ Complete workshop for setting up a develop systes, developing a contact database
 -- source: Angular  
 
 
-# Step 1: Setting up devel system and server#
+## Step 1: Setting up devel system and server#
   
 **Setting up a developer machine**  
 Configure a developer system
@@ -66,9 +66,9 @@ phpmyadmin: http://[ip]:888
 wildfly console: http://[ip]:9990  (user=admin/passwd=admin /  lokaal is het passwd: admin)  
   
   
-# Step 2: Developing the backend
+## Step 2: Developing the backend
 
 
-# Step 3: Developing the frontend
+## Step 3: Developing the frontend
 
 

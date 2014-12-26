@@ -1,13 +1,12 @@
 
 ----------
 
-#Workshop: Building a contact database 
+#Workshop: Building a contact database (note: project is in progress!!)   
 ### Using: JEE7, Java8, Wildfly, MySQL, AngularJS
-### note: this project is work-in-progress !!! 
 -----------
 ##Description:  
 Complete workshop for setting up a develop systes, developing a contact database and deployment to a linux server in the cloud...  
-  
+     
 ## Still Todo: #
 
 - async code

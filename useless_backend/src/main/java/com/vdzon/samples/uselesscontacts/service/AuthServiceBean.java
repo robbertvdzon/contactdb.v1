@@ -8,6 +8,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 
 @Stateless(name = "AuthService")
@@ -32,17 +33,26 @@ public class AuthServiceBean implements AuthService {
         return null;
     }
 
-//    @Override
-//    public boolean isAuthorized(long authId, String authToken, Set<String> rolesAllowed){
-//        AuthAccessElement authAccessElement = tokens.get(authToken);
-//        if (authAccessElement==null) return false;
-//        for (String roleAllowed:rolesAllowed){
-//            for (String userRole:authAccessElement.getAuthPermission().split(",")){
-//                if (userRole.equals(roleAllowed))
-//                    return true;
-//            }
-//        }
-//        return false;
-//    }
+    @Override
+    public boolean isAuthorized(String authId, String authToken, Set<String> rolesAllowed){
+        //TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        boolean autoLogin = true;//TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        if (autoLogin){
+            return true;
+        }
+
+
+
+        AuthAccessElement authAccessElement = tokens.get(authToken);
+        if (authAccessElement==null) return false;
+        for (String roleAllowed:rolesAllowed){
+            for (String userRole:authAccessElement.getAuthPermission().split(",")){
+                if (userRole.equals(roleAllowed))
+                    return true;
+            }
+        }
+        return false;
+    }
 
 }

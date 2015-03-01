@@ -1,7 +1,13 @@
 package com.vdzon.samples.uselesscontacts.data;
 
+import org.codehaus.jackson.JsonParseException;
+import org.codehaus.jackson.map.ObjectMapper;
+
 import javax.persistence.*;
+import javax.ws.rs.WebApplicationException;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.IOException;
+import java.util.UUID;
 
 /**
  * Simple entity.
@@ -10,13 +16,19 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 @XmlRootElement
 @Entity
-@Table(name="contacts")
+@Table(name = "contacts")
 public class Contact {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id")
-    @SequenceGenerator(name = "id", sequenceName = "id")
-    private Long id;
 
+    @Id
+    @GeneratedValue(generator="CONTACT_TABLE_SEQ",strategy=GenerationType.TABLE)
+    @TableGenerator(name="CONTACT_TABLE_SEQ",
+            table="SEQUENCES",
+            pkColumnName="SEQ_NAME", // Specify the name of the column of the primary key
+            valueColumnName="SEQ_NUMBER", // Specify the name of the column that stores the last value generated
+            pkColumnValue="CONTACT_ID", // Specify the primary key column value that would be considered as a primary key generator
+            allocationSize=1)
+    private Long id;
+    private UUID uuid;
     private Long userId;
     private String name;
     private String email;
@@ -27,6 +39,14 @@ public class Contact {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 
     public Long getUserId() {
@@ -55,8 +75,12 @@ public class Contact {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) { return true; }
-        if (o == null || getClass() != o.getClass()) { return false; }
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         Contact person = (Contact) o;
 

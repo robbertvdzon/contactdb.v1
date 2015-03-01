@@ -26,6 +26,20 @@ public class AuthenticationResource {
     @Path("login")
     @PermitAll
     public AuthAccessElement login(@Context HttpServletRequest request, AuthLoginElement loginElement) {
+
+        //TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        boolean autoLogin = true;//TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        if (autoLogin){
+            request.getSession().setAttribute(AuthAccessElement.PARAM_AUTH_ID, "1");
+            request.getSession().setAttribute(AuthAccessElement.PARAM_AUTH_TOKEN, "1");
+            AuthAccessElement el = new AuthAccessElement();
+            el.setAuthId(1);
+            el.setAuthPermission("root");
+            el.setAuthToken("1");
+            return el;
+        }
+
         AuthAccessElement accessElement = authService.login(loginElement);
         if (accessElement != null) {
             request.getSession().setAttribute(AuthAccessElement.PARAM_AUTH_ID, accessElement.getAuthId());
@@ -34,18 +48,5 @@ public class AuthenticationResource {
         return accessElement;
     }
 
-    @POST
-    @Path("logintest")
-    @PermitAll
-    public void logintest() {
-        System.out.println("test");
-    }
-
-    @GET
-    @Path("logintest2")
-    @PermitAll
-    public void logintest2() {
-        System.out.println("test");
-    }
 
 }

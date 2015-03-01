@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 14 dec 2014 om 15:36
+-- Genereertijd: 24 feb 2015 om 19:50
 -- Serverversie: 5.6.12-log
 -- PHP-versie: 5.4.12
 
@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `userId` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `UUID` binary(16) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -40,9 +41,28 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 -- Gegevens worden uitgevoerd voor tabel `contacts`
 --
 
-INSERT INTO `contacts` (`id`, `userId`, `name`, `email`) VALUES
-(1, 1, 'contact1', 'email1'),
-(2, 1, 'contact2', 'email2');
+INSERT INTO `contacts` (`id`, `userId`, `name`, `email`, `UUID`) VALUES
+(1, 1, 'contact1', 'email1abcooo', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'),
+(4, 1, 'aa', 'ss2', '—	\n-ÎÚOÏº7‰!nÿM'),
+(5, 1, 'y', 'y2', '³[°*x\\JªB\rX$K»');
+
+-- --------------------------------------------------------
+
+--
+-- Tabelstructuur voor tabel `sequences`
+--
+
+CREATE TABLE IF NOT EXISTS `sequences` (
+  `SEQ_NAME` varchar(32) NOT NULL,
+  `SEQ_NUMBER` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Gegevens worden uitgevoerd voor tabel `sequences`
+--
+
+INSERT INTO `sequences` (`SEQ_NAME`, `SEQ_NUMBER`) VALUES
+('CONTACT_ID', 6);
 
 -- --------------------------------------------------------
 
@@ -54,6 +74,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
   `username` varchar(64) NOT NULL,
   `passwd` varchar(255) NOT NULL,
+  `uuid` binary(16) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -61,8 +82,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Gegevens worden uitgevoerd voor tabel `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `passwd`) VALUES
-(1, 'robbert', 'robbert');
+INSERT INTO `users` (`id`, `username`, `passwd`, `uuid`) VALUES
+(1, 'robbert', 'robbert', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

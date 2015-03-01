@@ -2,16 +2,32 @@ package com.vdzon.samples.uselesscontacts.rest;
 
 import com.vdzon.samples.uselesscontacts.data.AuthAccessElement;
 import com.vdzon.samples.uselesscontacts.data.Contact;
+import com.vdzon.samples.uselesscontacts.mapper.ContactModelMapper;
+import com.vdzon.samples.uselesscontacts.model.ContactModel;
 import com.vdzon.samples.uselesscontacts.service.ContactService;
+import com.vdzon.samples.uselesscontacts.service.Sleeper;
+import com.vdzon.samples.uselesscontacts.service.SleeperImpl;
 
+import javax.annotation.Resource;
 import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.enterprise.concurrent.ManagedExecutorService;
 import javax.ws.rs.*;
+import javax.ws.rs.container.AsyncResponse;
+import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
+import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
+import static javax.ws.rs.core.Response.Status.SERVICE_UNAVAILABLE;
+import static javax.ws.rs.core.Response.Status.FORBIDDEN;
+import static javax.ws.rs.core.Response.status;
 
 /**
  * REST Service to expose the data to display in the UI grid.
@@ -23,54 +39,121 @@ import java.util.List;
 @Path("/contacts")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class ContactsResource {
+public class ContactsResource extends AbstractResource{
     @EJB
-    ContactService teamService;
+    ContactService contactService;
+
+    @Resource
+    ManagedExecutorService executor;
+
+    @EJB
+    Sleeper sleeper;
 
     @GET
-    @Path("all")
+    @Path("getContacts")
     @Produces(MediaType.APPLICATION_JSON)
-//    @RolesAllowed("root")
     @PermitAll
-    public List<Contact> listAll(@Context HttpHeaders headers) throws Exception {
+    public void getContacts(@Suspended AsyncResponse response, @Context HttpHeaders headers) throws Exception {
+        System.out.println("\n\n\n GET CONTACTS USING FUTURES \n\n\n\n");
+        if (!checkAuth ("root",headers)){
+            response.resume(new WebApplicationException(FORBIDDEN));
+
+//            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
+        }
         long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));
-        String authToken = headers.getHeaderString(AuthAccessElement.PARAM_AUTH_TOKEN);
-        return teamService.listAll(userId);
+
+        CompletableFuture<List<Contact>> customerFuture =
+                CompletableFuture.completedFuture(userId)
+                        .thenComposeAsync(this::getContacts, executor);
+
+        CompletableFuture<List<ContactModel>> model = customerFuture.thenComposeAsync(this::toModel, executor);
+
+        customerFuture
+                .whenCompleteAsync(
+                        (modelresult, throwable) -> {
+                            System.out.println("\n\n\n FILL RESULT \n\n\n\n");
+                            boolean b = modelresult == null ? response.resume(throwable) : response.resume(modelresult);
+                        }
+                );
+
+        response.setTimeout(1, SECONDS);
+        response.setTimeoutHandler(
+                r -> r.resume(new WebApplicationException(SERVICE_UNAVAILABLE)));
+
+
+//        return Response.accepted( ContactModelMapper.toModel(contactService.listAll(userId))).build();
     }
 
-    @GET
-    @Path("all2")
-    @Produces(MediaType.APPLICATION_JSON)
-//    @RolesAllowed("root")
-    @PermitAll
-    public List<Contact> listAll2(@Context HttpHeaders headers) throws Exception {
-        long userId = 1;
-        return teamService.listAll(userId);
+    private CompletableFuture<List<Contact>> getContacts(final long userId) {
+        CompletableFuture cf = new CompletableFuture();
+        sleeper.schedule(
+                () -> cf.complete(contactService.listAll(userId)));
+        return cf;
     }
 
-    @GET
-    @Path("test1")
-    @PermitAll
-    public String test1() {
-        System.out.println("HALLO2! ");
-        return "hallo2";
+    private CompletableFuture<List<ContactModel>> toModel(final List<Contact> contacts) {
+        CompletableFuture cf = new CompletableFuture();
+        sleeper.schedule(
+                () -> cf.complete(ContactModelMapper.toModel(contacts)));
+        return cf;
     }
 
 
 
     @GET
     @Path("{id}")
-    public Contact getTeam(@PathParam("id") Long id) {
+    public Contact getContact(@PathParam("id") Long id) {
         return null;
     }
 
     @POST
-    public Contact saveTeam(Contact team) {
-        return team;
+    @Path("saveContact")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @PermitAll
+    public Response saveContact(@QueryParam("contact") ContactModel model , @Context HttpHeaders headers) throws Exception {
+        if (!checkAuth ("root",headers)){
+            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
+        }
+        System.out.println("SAVE USer:"+model.getName());
+        Contact contact = contactService.getContact(model.getUuid());
+        ContactModelMapper.mergeModel(model,contact);
+        contactService.saveContact(contact);
+//        System.out.println("SAVE USer:"+model.getName());
+
+        long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));
+        return Response.accepted( ContactModelMapper.toModel(contactService.listAll(userId))).build();
+    }
+
+    @PUT
+    @Path("")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @PermitAll
+    public Response addContact(@QueryParam("contact") ContactModel model , @Context HttpHeaders headers) throws Exception {
+        if (!checkAuth ("root",headers)){
+            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
+        }
+        long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));
+        System.out.println("ADD USer:" + model.getName());
+        Contact contact = new Contact();
+        ContactModelMapper.mergeModel(model,contact);
+        contact.setUserId(userId);
+        contact.setUuid(UUID.randomUUID());
+        contactService.addContact(contact);
+        return Response.accepted( ContactModelMapper.toModel(contactService.listAll(userId))).build();
     }
 
     @DELETE
-    @Path("{id}")
-    public void deleteTeam(@PathParam("id") Long id) {
+    @Path("{uuid}")
+    @PermitAll
+    public Response deleteContact(@PathParam("uuid") UUID uuid, @Context HttpHeaders headers) {
+        System.out.println("Delete USer:"+uuid);
+        if (!checkAuth ("root",headers)){
+            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
+        }
+        long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));
+        contactService.deleteContact(uuid);
+        return Response.accepted( ContactModelMapper.toModel(contactService.listAll(userId))).build();
     }
 }

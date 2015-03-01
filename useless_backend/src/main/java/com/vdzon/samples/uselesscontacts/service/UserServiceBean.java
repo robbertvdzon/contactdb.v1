@@ -62,4 +62,10 @@ public class UserServiceBean implements UserService {
         }
         return null;
     }
+
+    public void syncUser(final User user){
+        entityManager.merge(user);
+    }
+
+
 }

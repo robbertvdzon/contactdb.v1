@@ -10,31 +10,8 @@ Workshop: Building a contact database (note: project is in progress!!)
 **Keywords:** JEE7, Java8, JPA, .....  
 **Description:** Complete workshop for setting up a develop systes, developing a
 contact database and deployment to a linux server in the cloud...
-
  
 
-Todo:
------
-
--   async code
-
--   login beter
-
--   add/edit/remove contact
-
--   document backend
-
--   document angular
-
--   blogs for:  
-    -- install Intellij  
-    -- install WAMP  
-    -- install Wildfly on devel system  
-    -- install Bower/Angular on devel system  
-    -- source: REST  
-    -- source: Asyc  
-    -- source: Authentication  
-    -- source: Angular
 
 Step 1: Setting up devel system and server
 ------------------------------------------

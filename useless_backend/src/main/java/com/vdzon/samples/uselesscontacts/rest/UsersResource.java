@@ -2,27 +2,35 @@ package com.vdzon.samples.uselesscontacts.rest;
 
 import com.vdzon.samples.uselesscontacts.data.AuthAccessElement;
 import com.vdzon.samples.uselesscontacts.data.User;
+import com.vdzon.samples.uselesscontacts.mapper.UserModelMapper;
+import com.vdzon.samples.uselesscontacts.service.AuthService;
 import com.vdzon.samples.uselesscontacts.service.UserService;
 
+import javax.annotation.security.DeclareRoles;
 import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * REST Service to expose the data to display in the UI grid.
  *
  * @author Roberto Cortez
  */
-//@DeclareRoles({"root", "Manager", "Employee"})
+@DeclareRoles({"root", "Manager", "Employee"})
 @Stateless
 @Path("/users")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class UsersResource {
+public class UsersResource extends AbstractResource{
 
     @EJB
     UserService userService;
@@ -31,11 +39,32 @@ public class UsersResource {
     @Path("getuser")
     @PermitAll
     @Produces(MediaType.APPLICATION_JSON)
-    public User getUser(@Context HttpHeaders headers) {
+    public Response getUser(@Context HttpHeaders headers) {
+        if (!checkAuth ("root",headers)){
+            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
+        }
         long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));
-        String authToken = headers.getHeaderString(AuthAccessElement.PARAM_AUTH_TOKEN);
-        return userService.findUser(userId);
-
+        return Response.accepted( UserModelMapper.toModel(userService.findUser(userId))).build();
     }
+
+//    @POST
+//    @Path("syncuser")
+//    @PermitAll
+//    @Produces(MediaType.APPLICATION_JSON)
+//    @Consumes(MediaType.APPLICATION_JSON)
+//    public Response syncUser(@QueryParam("user")User user, @Context HttpHeaders headers) {
+//        if (!checkAuth ("root",headers)){
+//            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
+//        }
+//
+//        long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));
+//        String authToken = headers.getHeaderString(AuthAccessElement.PARAM_AUTH_TOKEN);
+//        // check access here!
+//        userService.syncUser(user);
+//        return Response.accepted(userService.findUser(userId)).build();
+//
+//    }
+
+
 
 }

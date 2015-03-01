@@ -1,9 +1,14 @@
 package com.vdzon.samples.uselesscontacts.data;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import javax.persistence.*;
+import javax.ws.rs.WebApplicationException;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
+import java.util.UUID;
 
 @XmlRootElement
 @Entity
@@ -11,9 +16,15 @@ import java.util.List;
 public class User implements Serializable {
 
     @Id
-    @Column(name = "id")
-    @GeneratedValue
-    private int id;
+    @GeneratedValue(generator="CONTACT_TABLE_SEQ",strategy=GenerationType.TABLE)
+    @TableGenerator(name="CONTACT_TABLE_SEQ",
+            table="SEQUENCES",
+            pkColumnName="SEQ_NAME", // Specify the name of the column of the primary key
+            valueColumnName="SEQ_NUMBER", // Specify the name of the column that stores the last value generated
+            pkColumnValue="CONTACT_ID", // Specify the primary key column value that would be considered as a primary key generator
+            allocationSize=1)
+    private Long id;
+    private UUID uuid;
 
     private String username;
     private String passwd;
@@ -40,12 +51,20 @@ public class User implements Serializable {
         this.permissions = permissions;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 
     public String getPasswd() {
@@ -57,7 +76,6 @@ public class User implements Serializable {
     }
 
     public List<Contact> getContacts() {
-        System.out.println("get contacts");
         return contacts;
     }
 

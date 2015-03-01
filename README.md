@@ -6,7 +6,7 @@ Workshop: Building a contact database (note: project is in progress!!)
  
 
 **Creation date:** 26-dec-2014  
-**Last modification date:** 26-dec-2014  
+**Last modification date:** 01-maart-2015  
 **Keywords:** JEE7, Java8, JPA, .....  
 **Description:** Complete workshop for setting up a develop systes, developing a
 contact database and deployment to a linux server in the cloud...

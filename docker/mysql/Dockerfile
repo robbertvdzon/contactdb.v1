@@ -11,7 +11,6 @@ RUN mysql -u root --password=admin < /data/contact.sql
 
 EXPOSE 3306
 
-
-CMD tail -f /data/contact.sql
+CMD mysqld
 
 

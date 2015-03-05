@@ -6,6 +6,7 @@ RUN echo "mysql-server-5.5 mysql-server/root_password password admin" | debconf-
 RUN apt-get -y install mysql-server 
 RUN mkdir /data
 RUN mysqld &
+RUN sleep 5
 COPY contact.sql /data/contact.sql
 RUN mysql -u root --password=admin < /data/contact.sql
 

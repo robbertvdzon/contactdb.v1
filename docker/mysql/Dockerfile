@@ -1,4 +1,4 @@
-FROM debian
+FROM phusion/baseimage:0.9.13
 RUN apt-get update
 RUN apt-get install debconf-utils
 RUN echo "mysql-server-5.5 mysql-server/root_password_again password admin" | debconf-set-selections
@@ -13,5 +13,4 @@ RUN mysql -u root --password=admin < /data/contact.sql
 EXPOSE 3306
 
 CMD mysqld
-
 

@@ -47,6 +47,7 @@ public class UsersResource extends AbstractResource{
         return Response.accepted( UserModelMapper.toModel(userService.findUser(userId))).build();
     }
 
+
 //    @POST
 //    @Path("syncuser")
 //    @PermitAll

@@ -84,6 +84,27 @@ public class ContactsResource extends AbstractResource{
 //        return Response.accepted( ContactModelMapper.toModel(contactService.listAll(userId))).build();
     }
 
+
+    @GET
+    @Path("test2")
+    @PermitAll
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response test2(@Context HttpHeaders headers) {
+        return Response.accepted( ContactModelMapper.toModel(contactService.listAll(1))).build();
+    }
+
+    @GET
+    @Path("test1")
+    @PermitAll
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response test1(@Context HttpHeaders headers) {
+        String result = "hallo vanuit jee!";
+        return Response.accepted(result).build();
+    }
+
+
+
+
     private CompletableFuture<List<Contact>> getContacts(final long userId) {
         CompletableFuture cf = new CompletableFuture();
         sleeper.schedule(

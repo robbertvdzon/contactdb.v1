@@ -5,6 +5,7 @@ RUN /opt/wildfly/bin/add-user.sh admin admin --silent
 USER root
 
 # for mysql client
+RUN apt-get update
 RUN apt-get install mysql-client-core-5.5
 RUN apt-get install telnet
 

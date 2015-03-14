@@ -34,7 +34,7 @@ echo '                    <driver-class>com.mysql.jdbc.Driver</driver-class>' >>
 echo '                    <driver>mysql-connector-java-5.1.16.jar</driver>' >> /tmp/add.txt
 echo '                    <security>' >> /tmp/add.txt
 echo '                        <user-name>admin</user-name>' >> /tmp/add.txt
-echo '                        <password>admin</password>' >> /tmp/add.txt
+echo '                        <password></password>' >> /tmp/add.txt
 echo '                    </security>' >> /tmp/add.txt
 echo '                    <validation>' >> /tmp/add.txt
 echo '                        <validate-on-match>false</validate-on-match>' >> /tmp/add.txt

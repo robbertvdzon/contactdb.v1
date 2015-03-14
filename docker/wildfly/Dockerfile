@@ -1,6 +1,6 @@
 FROM sillenttroll/wildfly-java-8
 #RUN /opt/wildfly/bin/add-user.sh user password --silent
-
+RUN /opt/wildfly/bin/add-user.sh -m -u admin -p admin
 USER root
 
 RUN mkdir /data

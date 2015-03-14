@@ -13,7 +13,7 @@
 cp /data/*.jar /opt/wildfly/standalone/deployments
 cp /data/*.war /opt/wildfly/standalone/deployments
 
-/opt/wildfly/bin/add-user.sh -m -u admin -p admin
+#/opt/wildfly/bin/add-user.sh -m -u admin -p admin
 
 sed -i 's/127.0.0.1/0.0.0.0/g' /opt/wildfly/standalone/configuration/standalone.xml
 #service wildfly restart

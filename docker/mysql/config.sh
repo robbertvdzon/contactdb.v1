@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 mysqld_safe &
 mysqladmin --silent --wait=30 ping 
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;"

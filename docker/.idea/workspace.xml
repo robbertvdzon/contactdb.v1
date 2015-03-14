@@ -23,21 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Dockerfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wildfly/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03803132" vertical-offset="0" max-vertical-offset="894">
-              <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.sh" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wildfly/config.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="1275">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.35443038" vertical-offset="372" max-vertical-offset="1275">
+              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <list>
         <option value="$PROJECT_DIR$/mysql/Dockerfile" />
         <option value="$PROJECT_DIR$/mysql/config.sh" />
-        <option value="$PROJECT_DIR$/wildfly/config.sh" />
         <option value="$PROJECT_DIR$/wildfly/Dockerfile" />
+        <option value="$PROJECT_DIR$/wildfly/config.sh" />
       </list>
     </option>
   </component>
@@ -380,18 +380,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wildfly/config.sh">
+    <entry file="file://$PROJECT_DIR$/wildfly/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wildfly/Dockerfile">
+    <entry file="file://$PROJECT_DIR$/wildfly/config.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03803132" vertical-offset="0" max-vertical-offset="894">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.35443038" vertical-offset="372" max-vertical-offset="1275">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
           <folding />
         </state>
       </provider>

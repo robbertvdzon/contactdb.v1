@@ -33,7 +33,7 @@ echo '                    <connection-url>jdbc:mysql://localhost:3306/contact</c
 echo '                    <driver-class>com.mysql.jdbc.Driver</driver-class>' >> /tmp/add.txt
 echo '                    <driver>mysql-connector-java-5.1.16.jar</driver>' >> /tmp/add.txt
 echo '                    <security>' >> /tmp/add.txt
-echo '                        <user-name>root</user-name>' >> /tmp/add.txt
+echo '                        <user-name>admin</user-name>' >> /tmp/add.txt
 echo '                        <password>admin</password>' >> /tmp/add.txt
 echo '                    </security>' >> /tmp/add.txt
 echo '                    <validation>' >> /tmp/add.txt

@@ -4,6 +4,10 @@ RUN /opt/wildfly/bin/add-user.sh admin admin --silent
 #RUN /opt/wildfly/bin/add-user.sh -m -u admin -p admin
 USER root
 
+# for mysql client
+apt-get install mysql-client-core-5.5
+apt-get install telnet
+
 RUN mkdir /data
 COPY contactsbackend-1.0-SNAPSHOT.war /data/contactsbackend-1.0-SNAPSHOT.war
 COPY config.sh /data/config.sh

@@ -29,7 +29,7 @@ sed -i 's/127.0.0.1/0.0.0.0/g' /opt/wildfly/standalone/configuration/standalone.
 #
 rm -f /tmp/add.txt
 echo ' <datasource jta="false" jndi-name="java:jboss/datasources/MySQLDS" pool-name="MySQLDS" enabled="true" use-ccm="false">' >> /tmp/add.txt
-echo '                    <connection-url>jdbc:mysql://localhost:3306/contact</connection-url>' >> /tmp/add.txt
+echo '                    <connection-url>jdbc:mysql://172.17.0.70:3306/contact</connection-url>' >> /tmp/add.txt
 echo '                    <driver-class>com.mysql.jdbc.Driver</driver-class>' >> /tmp/add.txt
 echo '                    <driver>mysql-connector-java-5.1.16.jar</driver>' >> /tmp/add.txt
 echo '                    <security>' >> /tmp/add.txt

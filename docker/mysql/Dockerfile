@@ -2,7 +2,8 @@ FROM wnameless/mysql-phpmyadmin
 RUN mkdir /data
 COPY config.sh /data/config.sh
 COPY contact.sql /data/contact.sql
-RUN mysql -u root --password=admin < /data/contact.sql
+RUN chmod a+x /data/contact.sql
+RUN /data/config.sh
 EXPOSE 3306
 CMD mysqld
 

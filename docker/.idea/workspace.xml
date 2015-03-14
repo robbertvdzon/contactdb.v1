@@ -46,8 +46,8 @@
       <file leaf-file-name="config.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysql/config.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.019562716" vertical-offset="0" max-vertical-offset="869">
-              <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.15650173" vertical-offset="0" max-vertical-offset="869">
+              <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysql/config.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019562716" vertical-offset="0" max-vertical-offset="869">
-          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.15650173" vertical-offset="0" max-vertical-offset="869">
+          <caret line="8" column="67" selection-start-line="8" selection-start-column="67" selection-end-line="8" selection-end-column="84" />
           <folding />
         </state>
       </provider>

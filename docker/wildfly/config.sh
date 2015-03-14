@@ -22,7 +22,7 @@ sed -i 's/127.0.0.1/0.0.0.0/g' /opt/wildfly/standalone/configuration/standalone.
 #
 # stop wildfly
 #
-service wildfly stop
+#service wildfly stop
 
 #
 # add the mySQL jdbc configuration

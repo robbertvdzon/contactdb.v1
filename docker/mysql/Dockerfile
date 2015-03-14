@@ -4,8 +4,6 @@ COPY config.sh /data/config.sh
 COPY contact.sql /data/contact.sql
 RUN chmod a+x /data/config.sh
 RUN /data/config.sh
-EXPOSE 3306
-CMD mysqld
 
 
 

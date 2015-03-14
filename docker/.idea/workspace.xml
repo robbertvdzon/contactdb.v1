@@ -26,8 +26,8 @@
       <file leaf-file-name="Dockerfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wildfly/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.01901566" vertical-offset="0" max-vertical-offset="894">
-              <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.03803132" vertical-offset="0" max-vertical-offset="894">
+              <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -390,8 +390,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wildfly/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.01901566" vertical-offset="0" max-vertical-offset="894">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.03803132" vertical-offset="0" max-vertical-offset="894">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
           <folding />
         </state>
       </provider>

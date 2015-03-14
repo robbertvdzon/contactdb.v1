@@ -3,12 +3,12 @@
 
 
 
-sh /workspace/contactdb.v1/resources/wildfly-install.sh
+#sh /workspace/contactdb.v1/resources/wildfly-install.sh
 
 #
 # update rc.d (script doesn’t do that which makes wildfly not being started at boot time
 #
-update-rc.d wildfly defaults
+#update-rc.d wildfly defaults
 
 cp /data/*.jar /opt/wildfly/standalone/deployments
 cp /data/*.war /opt/wildfly/standalone/deployments

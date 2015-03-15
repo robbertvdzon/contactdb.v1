@@ -17,4 +17,4 @@ RUN /data/config.sh
 EXPOSE 80
 WORKDIR /app
 
-CMD ["/run.sh"]
+CMD ["/data/run.sh"]

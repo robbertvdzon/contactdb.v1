@@ -12,7 +12,7 @@ ADD config.sh /data/config.sh
 ADD run.sh /data/run.sh
 RUN chmod a+x /data/run.sh
 RUN chmod a+x /data/config.sh
-RUN /data/config.sh
+#RUN /data/config.sh
 
 EXPOSE 80
 WORKDIR /app

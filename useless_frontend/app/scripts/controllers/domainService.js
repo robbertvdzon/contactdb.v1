@@ -22,6 +22,7 @@ angular.module('mswFrontendApp')
 
         sharedService.loadData = function () {
             {
+
                 $http.get("/api/resources/users/getuser").success(
                     function (response) {
                         response.username = response.username;
@@ -30,6 +31,11 @@ angular.module('mswFrontendApp')
                     });
             }
         }
+
+        sharedService.hasModel = function () {
+            return !angular.isUndefined(sharedService.model);
+        };
+
 
         sharedService.getModel = function () {
             return sharedService.model;

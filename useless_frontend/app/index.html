@@ -35,25 +35,33 @@
     <div class="header">
         <h3 class="text-muted">MIJN SPORTWESTRIJDEN</h3>
         <div class="menu1">
-        <table>
+
+        <table width="100%" >
         <tr>
-            <td></td>
-            <td><a ng-href="#/login" ng-hide="isAuth()">Login</a></td>
-            <td><a ng-href="#">Home</a></td>
-            <td><a ng-href="#/contacts" ng-show="isAuth()">Contacten</a></td>
-            <td ng-show="isAuth()">
-                <div ng-controller='menuCtrl'>
-                    <button ng-click="logOff()">
-                        Logoff
-                    </button>
-                </div>
+            <td>
+
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><a ng-href="#">Home</a></td>
+                        <td><a ng-href="#/contacts" ng-show="isAuth()">Contacten</a></td>
+                    </tr>
+                </table>
+
+
+
             </td>
-            <td ng-show="isAuth()">
-                <div ng-controller='menuCtrl'>
-                    <button ng-click="reload()">
-                        Reload
-                    </button>
-                </div>
+            <td>
+            </td>
+
+            <td align="right">
+                <table>
+                    <tr>
+                        <td><a ng-href="#/login" ng-hide="isAuth()">Login</a></td>
+                        <td><a ng-href="#" ng-show="isAuth()" ng-click="logOff()">Logoff</a></td>
+                    </tr>
+                </table>
+
             </td>
         </tr>
         </table>
@@ -91,11 +99,18 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
-<script src="scripts/controllers/domain.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/contacts.js"></script>
-<script src="scripts/controllers/login.js"></script>
-<script src="scripts/controllers/domainmodel.js"></script>
+
+<script src="scripts/controllers/authHttpRequestInterceptor.js"></script>
+<script src="scripts/controllers/httpRequestInterceptor.js"></script>
+<script src="scripts/controllers/config.js"></script>
+<script src="scripts/controllers/authFactory.js"></script>
+<script src="scripts/controllers/loginController.js"></script>
+
+<script src="scripts/controllers/domainService.js"></script>
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/controllers/menuController.js"></script>
+<script src="scripts/controllers/contactsController.js"></script>
+
 <!-- endbuild -->
 </body>
 </html>

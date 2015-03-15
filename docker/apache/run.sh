@@ -1,4 +1,11 @@
 #!/bin/bash
+
+rm -f /tmp/add.txt
+echo 'ProxyPass /api http://localhost:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
+echo 'ProxyPassReverse /api http://localhost:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
+sed  -i '/<VirtualHost/r /tmp/add.txt' /etc/apache2/sites-available/000-default.conf
+
+
 chown www-data:www-data /app -R
 source /etc/apache2/envvars
 exec apache2 -D FOREGROUND

@@ -1,9 +1,51 @@
 <p>This is the contacts view.</p>
 username: {{var1.text}} <br>
 <br>
-        Members:
-<div ng-repeat="mem in contacts">
-    {{mem}}
-    <br>
+Members:
+
+<table>
+    <tr ng-repeat="contact in contacts" >
+        <td>{{ contact.id }}</td>
+        <td>&nbsp;</td>
+        <td>{{ contact.name }}</td>
+        <td>&nbsp;</td>
+        <td>{{ contact.email }}</td>
+        <td>&nbsp;</td>
+        <td>
+            <button ng-click="edit('{{contact.uuid}}')">
+                edit
+            </button>
+        </td>
+        <td>&nbsp;</td>
+        <td>
+            <button ng-click="delete('{{contact.uuid}}')">
+                remove
+            </button>
+        </td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<div>
+<b>EDIT CONTACT</b><br>
+<input type="text" name="userName" ng-model="selectedcontact.name" required>
+<input type="text" name="email" ng-model="selectedcontact.email" required>
+<button ng-click="save()">
+    save
+</button>
+</div>
+
+<br>
+<br>
+
+<div>
+    <b>NEW CONTACT</b><br>
+        <input type="text" name="userName" ng-model="newcontact.name" required>
+        <input type="text" name="email" ng-model="newcontact.email" required>
+        <button ng-click="add()">
+            toevoegen
+        </button>
 </div>
 

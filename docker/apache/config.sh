@@ -1,6 +1,6 @@
 #!/bin/bash
-echo 'ProxyPass /api http://localhost:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
-echo 'ProxyPassReverse /api http://localhost:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
+echo 'ProxyPass /api http://wildfly:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
+echo 'ProxyPassReverse /api http://wildfly:28080/contactsbackend-1.0-SNAPSHOT' >> /tmp/add.txt
 sed  -i '/<VirtualHost/r /tmp/add.txt' /etc/apache2/sites-available/default
 rm -f /tmp/add.txt
 

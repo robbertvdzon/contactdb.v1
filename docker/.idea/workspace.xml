@@ -26,8 +26,8 @@
       <file leaf-file-name="config.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apache/config.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="357">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="23" />
+            <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="357">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -46,8 +46,8 @@
       <file leaf-file-name="run.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apache/run.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07825086" vertical-offset="0" max-vertical-offset="869">
-              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.09781358" vertical-offset="0" max-vertical-offset="869">
+              <caret line="5" column="84" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="84" />
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
         <option value="$PROJECT_DIR$/mysql/config.sh" />
         <option value="$PROJECT_DIR$/wildfly/Dockerfile" />
         <option value="$PROJECT_DIR$/wildfly/config.sh" />
-        <option value="$PROJECT_DIR$/apache/config.sh" />
         <option value="$PROJECT_DIR$/apache/Dockerfile" />
+        <option value="$PROJECT_DIR$/apache/config.sh" />
         <option value="$PROJECT_DIR$/apache/run.sh" />
       </list>
     </option>
@@ -443,14 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apache/config.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="357">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apache/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -459,10 +451,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apache/config.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="357">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apache/run.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07825086" vertical-offset="0" max-vertical-offset="869">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.09781358" vertical-offset="0" max-vertical-offset="869">
+          <caret line="5" column="84" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="84" />
           <folding />
         </state>
       </provider>

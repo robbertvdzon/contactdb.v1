@@ -62,7 +62,7 @@ module add --name=com.mysql --resources=/data/mysql-connector-java-5.1.33-bin.ja
 
 # Add the datasource
 data-source add --name=MySQLDS --driver-name=mysql --jndi-name=java:jboss/datasources/MySQLDS --connection-url=jdbc:mysql://mysqldb:3306/contact --user-name=root --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 --enabled=true
-
+data-source remove --name=ExampleDS
 # Execute the batch
 run-batch
 EOF

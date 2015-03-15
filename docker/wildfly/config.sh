@@ -61,7 +61,7 @@ module add --name=com.mysql --resources=/data/mysql-connector-java-5.1.33-bin.ja
 /subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql,driver-xa-datasource-class-name=com.mysql.jdbc.jdbc2.optional.MysqlXADataSource)
 
 # Add the datasource
-data-source add --name=MySQLDS --driver-name=mysql --jndi-name=java:jboss/datasources/MySQLDS --connection-url=jdbc:mysql://mysqldb:3306/contact --user-name=admin --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 --enabled=true
+data-source add --name=MySQLDS --driver-name=mysql --jndi-name=java:jboss/datasources/MySQLDS --connection-url=jdbc:mysql://mysqldb:3306/contact --user-name=root --use-ccm=false --max-pool-size=25 --blocking-timeout-wait-millis=5000 --enabled=true
 
 # Execute the batch
 run-batch

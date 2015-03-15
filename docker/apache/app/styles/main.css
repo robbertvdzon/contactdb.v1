@@ -1,0 +1,29 @@
+
+@media (min-width:500px){
+    .menu1{
+        display: inline;
+    }
+
+    .menu2{
+        display: none;
+    }
+
+}
+
+@media (max-width:499px){
+    .menu1{
+        display: none;
+    }
+
+    .menu2{
+        display: inline;
+    }
+}
+
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+

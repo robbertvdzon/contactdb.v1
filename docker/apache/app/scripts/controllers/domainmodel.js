@@ -1,0 +1,51 @@
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name mswFrontendApp.controller:LoginCtrl
+ * @description
+ * # DomainModelCtrl
+ * Controller of the mswFrontendApp
+ */
+angular.module('mswFrontendApp')
+    .factory('domainService', ['$rootScope', '$http', function ($rootScope, $http) {
+        var sharedService = {};
+        sharedService.model = undefined;
+
+        sharedService.prepForBroadcast = function (msg) {
+            this.broadcastItem();
+        };
+
+        sharedService.broadcastItem = function () {
+            $rootScope.$broadcast('modelUpdated');
+        };
+
+        sharedService.loadData = function () {
+            {
+                $http.get("/api/resources/users/getuser").success(
+                    function (response) {
+                        response.username = response.username;
+                        sharedService.setModel(response);
+                        sharedService.broadcastItem();
+                    });
+            }
+        }
+
+        sharedService.getModel = function () {
+            return sharedService.model;
+        }
+
+        sharedService.setModel = function (newmodel) {
+            sharedService.model = newmodel;
+        }
+
+        return sharedService;
+
+    }
+
+
+    ]
+);
+
+
+

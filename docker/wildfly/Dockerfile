@@ -17,4 +17,9 @@ RUN chmod a+x /data/config.sh
 #RUN /data/config.sh
 #USER wildfly
 
+EXPOSE 8787
+EXPOSE 8080
+EXPOSE 9990
+
+
 CMD ["/data/config.sh"]

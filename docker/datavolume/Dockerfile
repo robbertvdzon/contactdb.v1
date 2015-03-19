@@ -1,3 +1,5 @@
 FROM scratch
 VOLUME /var/lib/mysql
-CMD true
+VOLUME /apps
+VOLUME /opt/wildfly/standalone/deployments
+CMD bin/bash

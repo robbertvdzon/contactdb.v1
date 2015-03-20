@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
-$PASSWORD=admindax
-$USERNAME=admindax
+PASSWORD=admindax
+USERNAME=admindax
 echo Setting credentials to $USERNAME:$PASSWORD
 PASSWORD=$(perl -e 'print crypt($ARGV[0], "password")' $PASSWORD)
 echo  useradd --shell /bin/sh --create-home --password $PASSWORD $USERNAME

@@ -21,7 +21,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
 ADD run.sh /run.sh
 ADD config.sh /config.sh
 RUN chmod 755 /*.sh
-RUN config.sh
+RUN /config.sh
 
 # Configure /app folder with sample app
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html

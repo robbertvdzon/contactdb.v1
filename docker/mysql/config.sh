@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "mysqld: ALL" >> /etc/hosts.allow
+chown mysql:mysql /var/lib/mysql
 mysqld_safe &
 mysqladmin --silent --wait=30 ping 
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;"

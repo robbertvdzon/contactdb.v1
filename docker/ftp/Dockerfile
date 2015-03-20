@@ -1,16 +1,42 @@
 FROM ubuntu:14.04
 MAINTAINER Robbert vd Zon <robbert@vdzon.com>
 
-RUN apt-get update && apt-get install -y openssh-server
-RUN mkdir /var/run/sshd
-RUN echo 'root:admindax' | chpasswd
-RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+# install package building helpers
+RUN apt-get -y update && apt-get -y --force-yes install dpkg-dev debhelper
 
-# SSH login fix. Otherwise user is kicked off after login
-RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+# install dependancies
+RUN apt-get -y build-dep pure-ftpd
 
-ENV NOTVISIBLE "in users profile"
-RUN echo "export VISIBLE=now" >> /etc/profile
+# build from source
+RUN mkdir /tmp/pure-ftpd/ && \
+    cd /tmp/pure-ftpd/ && \
+    apt-get source pure-ftpd && \
+    cd pure-ftpd-* && \
+    sed -i '/^optflags=/ s/$/ --without-capabilities/g' ./debian/rules && \
+    dpkg-buildpackage -b -uc
 
-EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+# install the new deb files
+RUN dpkg -i /tmp/pure-ftpd/pure-ftpd-common*.deb
+RUN apt-get -y install openbsd-inetd
+RUN dpkg -i /tmp/pure-ftpd/pure-ftpd_*.deb
+
+# Prevent pure-ftpd upgrading
+RUN apt-mark hold pure-ftpd pure-ftpd-common
+
+# setup ftpgroup and ftpuser
+RUN groupadd ftpgroup
+RUN useradd -g ftpgroup -d /dev/null -s /etc ftpuser
+
+RUN echo yes > /etc/pure-ftpd/conf/ChrootEveryone
+RUN echo no > /etc/pure-ftpd/conf/PAMAuthentication
+RUN echo no > /etc/pure-ftpd/conf/UnixAuthentication
+RUN echo "30000 30005" > /etc/pure-ftpd/conf/PassivePortRange
+RUN echo "10" > /etc/pure-ftpd/conf/MaxClientsNumber
+RUN echo yes > /etc/pure-ftpd/conf/CreateHomeDir
+RUN cd /etc/pure-ftpd/auth; ln -s ../conf/PureDB 50pure
+
+
+# startup
+CMD /usr/sbin/pure-ftpd -l puredb:/etc/pure-ftpd/pureftpd.pdb -x -E -j -R
+
+EXPOSE 21/tcp

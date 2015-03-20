@@ -1,14 +1,13 @@
-FROM ubuntu:14.04
-MAINTAINER Robbert vd Zon <robbert@vdzon.com>
+FROM ubuntu
 
-# install package building helpers
-RUN apt-get -y update && apt-get -y --force-yes install pure-ftpd
+RUN apt-get update -y
+RUN apt-get install -y proftpd
 
-# setup ftpgroup and ftpuser
-RUN groupadd ftpgroup
-RUN useradd -g ftpgroup -d /dev/null -s /etc ftpuser
+ADD launch /launch
+ADD proftpd.conf /etc/proftpd/proftpd.conf
+RUN sudo chown root:root /etc/proftpd/proftpd.conf
 
-# startup
-CMD /usr/sbin/pure-ftpd -l puredb:/etc/pure-ftpd/pureftpd.pdb -x -E -j -R
+EXPOSE 21
+EXPOSE 20
 
-EXPOSE 21/tcp
+ENTRYPOINT /launch

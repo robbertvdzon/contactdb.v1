@@ -1,7 +1,7 @@
 #!/bin/bash
 docker rm -f apache
 docker rm -f wildfly
-docker rm -f mysql
+docker rm -f mysqldb
 docker rm -f datavolume
 docker build -t robbertvdzon/datavolume /workspace/contactdb.v1/docker/datavolume
 docker run -d --name datavolume robbertvdzon/datavolume

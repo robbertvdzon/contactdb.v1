@@ -26,4 +26,4 @@ docker build -t robbertvdzon/apache /workspace/contactdb.v1/docker/apache
 docker run -d -it -p 80:80 --name apache --volumes-from apachedata --link wildfly:wildfly robbertvdzon/apache
 
 docker build -t robbertvdzon/ssh /workspace/contactdb.v1/docker/ssh
-docker run -d -p 4022:22 --name ssh robbertvdzon/ssh
+docker run -d -p 4022:22 --volumes-from apachedata --volumes-from wildflydata  --volumes-from mysqldata --name ssh robbertvdzon/ssh

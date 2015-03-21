@@ -1,6 +1,11 @@
 #!/bin/bash
 
-export CLUSTERNR="1"
+export CLUSTERNR=$1
+if [ -z "$1" ]
+	then
+		export CLUSTERNR="1"
+fi
+
 
 export MYPHPADMIN_PORT=${CLUSTERNR}"081"
 export APACHE_PORT=${CLUSTERNR}"080"

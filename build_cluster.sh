@@ -37,5 +37,5 @@ docker build -t robbertvdzon/$DOCKERNAME_WILDFLY ./docker/wildfly
 docker run -d -it -p 8787:8787 -p 9990:9990 -p 8080:8080 --name $DOCKERNAME_WILDFLY --link $DOCKERNAME_MYSQLDB:mysqldb robbertvdzon/$DOCKERNAME_WILDFLY
 
 # apache container
-docker build -t robbertvdzon/apache ./docker/apache
+docker build -t robbertvdzon/$DOCKERNAME_APACHE ./docker/apache
 docker run -d -it -p 80:80 --name $DOCKERNAME_APACHE --volumes-from $DOCKERNAME_APACHEDATA --link $DOCKERNAME_WILDFLY:wildfly robbertvdzon/$DOCKERNAME_APACHE

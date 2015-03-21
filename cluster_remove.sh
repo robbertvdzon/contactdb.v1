@@ -6,17 +6,11 @@ if [ -z "$1" ]
 		export CLUSTERNR="1"
 fi
 
-export DOCKERNAME_SSH="ssh"$CLUSTERNR
 export DOCKERNAME_APACHE="apache"$CLUSTERNR
 export DOCKERNAME_WILDFLY="wildfly"$CLUSTERNR
 export DOCKERNAME_MYSQLDB="mysqldb"$CLUSTERNR
-export DOCKERNAME_WILDFLYDATA="wildflydata"$CLUSTERNR
-export DOCKERNAME_APACHEDATA="apachedata"$CLUSTERNR
 
-docker rm -f $DOCKERNAME_SSH
 docker rm -f $DOCKERNAME_APACHE
 docker rm -f $DOCKERNAME_WILDFLY
 docker rm -f $DOCKERNAME_MYSQLDB
-docker rm -f $DOCKERNAME_WILDFLYDATA
-docker rm -f $DOCKERNAME_APACHEDATA
 

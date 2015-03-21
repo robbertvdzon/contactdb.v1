@@ -1,9 +1,10 @@
 FROM ubuntu:trusty
-MAINTAINER Fernando Mayo <fernando@tutum.co>
+MAINTAINER Robbert vd Zon <robbert@vdzon.com>
 
 # Install base packages
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
+        openssh-server \
         curl \
         apache2 \
         libapache2-mod-php5 \
@@ -24,12 +25,25 @@ RUN chmod 755 /*.sh
 RUN /config.sh
 
 # Configure /app folder with sample app
-#RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
-#RUN chown www-data:www-data /app
-#RUN chmod 755 /app
 COPY app/ /initialapp
 RUN cp -avr /initialapp/* /var/www/html
 
 EXPOSE 80
 WORKDIR /
 CMD ["/run.sh"]
+
+# SSHD
+RUN mkdir /var/run/sshd
+RUN echo 'root:admindax' | chpasswd
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+
+EXPOSE 22
+
+CMD ["/run.sh"]
+

@@ -38,7 +38,7 @@ angular.module('mswFrontendApp')
         };
 
         authFactory.login = function (user) {
-            return $http.post('/api/resources/auth/login', user);
+            return $http.post('/resources/auth/login', user);
         };
 
         authFactory.logOff = function () {

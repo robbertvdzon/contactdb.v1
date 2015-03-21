@@ -23,7 +23,7 @@ angular.module('mswFrontendApp')
         $scope.loadData = function () {
             {
             $http({
-                url: "/api/resources/contacts/getContacts",
+                url: "resources/contacts/getContacts",
                 method: "GET",
              }).success(
                    function (response) {
@@ -48,7 +48,7 @@ angular.module('mswFrontendApp')
 
        $scope.save = function () {
             $http({
-                url: "/api/resources/contacts/saveContact",
+                url: "resources/contacts/saveContact",
                 method: "POST",
                 params: {contact: $scope.selectedcontact}
              }).success(
@@ -60,7 +60,7 @@ angular.module('mswFrontendApp')
 
        $scope.delete = function (uuid) {
             $http({
-                url: "/api/resources/contacts/"+uuid,
+                url: "resources/contacts/"+uuid,
                 method: "DELETE",
                 params: {contact: $scope.selectedcontact}
              }).success(
@@ -74,7 +74,7 @@ angular.module('mswFrontendApp')
             newContact.name = $scope.newcontact.name;
             newContact.email = $scope.newcontact.email;
             $http({
-                url: "/api/resources/contacts/",
+                url: "resources/contacts/",
                 method: "PUT",
                 params: {contact: newContact}
              }).success(

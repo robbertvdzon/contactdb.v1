@@ -22,8 +22,8 @@ angular.module('mswFrontendApp')
 //            alert(authFactory.getAuthData().authId+":"+authFactory.getAuthData().authPermission);
 //            if (authFactory.isAuthenticated()) alert("logged in")
 //            else alert("no");
-//            {$http.get("http://localhost/api/resources/teams/all").success(
-                {$http.get("/api/resources/users/getuser").success(
+//            {$http.get("http://localhost/resources/teams/all").success(
+                {$http.get("/resources/users/getuser").success(
 //                {$http.get("/api/resources/contacts/all").success(
                 function(response) {
                     alert(response.username);

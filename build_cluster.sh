@@ -2,6 +2,13 @@
 
 export CLUSTERNR="1"
 
+export MYPHPADMIN_PORT="888"
+export APACHE_PORT="80"
+export SSH_PORT="4022"
+export WILDFLY_ADMIN_PORT="9990"
+export WILDFLY_DEBUG_PORT="8787"
+export WILDFLY_APP_PORT="8080"
+
 export DOCKERNAME_SSH="ssh"$CLUSTERNR
 export DOCKERNAME_APACHE="apache"$CLUSTERNR
 export DOCKERNAME_WILDFLY="wildfly"$CLUSTERNR
@@ -18,7 +25,7 @@ docker rm -f $DOCKERNAME_APACHEDATA
 
 # mysql container
 docker build -t robbertvdzon/$DOCKERNAME_MYSQLDB ./docker/mysql
-docker run -d -p 888:80 --name $DOCKERNAME_MYSQLDB robbertvdzon/$DOCKERNAME_MYSQLDB
+docker run -d -p $MYPHPADMIN_PORT:80 --name $DOCKERNAME_MYSQLDB robbertvdzon/$DOCKERNAME_MYSQLDB
 
 # data container for wildfly
 docker build -t robbertvdzon/$DOCKERNAME_WILDFLYDATA ./docker/wildflydata
@@ -30,12 +37,12 @@ docker run -d --name $DOCKERNAME_APACHEDATA robbertvdzon/$DOCKERNAME_APACHEDATA
 
 # ssh container for accessing the wildfly and apache data
 docker build -t robbertvdzon/$DOCKERNAME_SSH ./docker/ssh
-docker run -d -p 4022:22 --volumes-from $DOCKERNAME_APACHEDATA --volumes-from $DOCKERNAME_WILDFLYDATA --name $DOCKERNAME_SSH robbertvdzon/$DOCKERNAME_SSH
+docker run -d -p $SSH_PORT:22 --volumes-from $DOCKERNAME_APACHEDATA --volumes-from $DOCKERNAME_WILDFLYDATA --name $DOCKERNAME_SSH robbertvdzon/$DOCKERNAME_SSH
 
 # wildfly container
 docker build -t robbertvdzon/$DOCKERNAME_WILDFLY ./docker/wildfly
-docker run -d -it -p 8787:8787 -p 9990:9990 -p 8080:8080 --name $DOCKERNAME_WILDFLY --link $DOCKERNAME_MYSQLDB:mysqldb robbertvdzon/$DOCKERNAME_WILDFLY
+docker run -d -it -p $WILDFLY_DEBUG_PORT:8787 -p $WILDFLY_ADMIN_PORT:9990 -p $WILDFLY_APP_PORT:8080 --name $DOCKERNAME_WILDFLY --link $DOCKERNAME_MYSQLDB:mysqldb robbertvdzon/$DOCKERNAME_WILDFLY
 
 # apache container
 docker build -t robbertvdzon/$DOCKERNAME_APACHE ./docker/apache
-docker run -d -it -p 80:80 --name $DOCKERNAME_APACHE --volumes-from $DOCKERNAME_APACHEDATA --link $DOCKERNAME_WILDFLY:wildfly robbertvdzon/$DOCKERNAME_APACHE
+docker run -d -it -p $APACHE_PORT:80 --name $DOCKERNAME_APACHE --volumes-from $DOCKERNAME_APACHEDATA --link $DOCKERNAME_WILDFLY:wildfly robbertvdzon/$DOCKERNAME_APACHE

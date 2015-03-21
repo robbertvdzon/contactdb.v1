@@ -57,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/apache/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5514541" vertical-offset="0" max-vertical-offset="894">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -566,7 +566,7 @@
     <entry file="file://$PROJECT_DIR$/apache/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5514541" vertical-offset="0" max-vertical-offset="894">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding />
         </state>
       </provider>

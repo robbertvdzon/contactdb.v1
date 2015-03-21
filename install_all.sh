@@ -24,7 +24,7 @@ docker run -d -p 4022:22 --volumes-from apachedata --volumes-from wildflydata  -
 
 # wildfly container
 docker build -t robbertvdzon/wildfly /workspace/contactdb.v1/docker/wildfly
-docker run -d -it -p 8787:8787 -p 9990:9990 -p 8080:8080 --name wildfly --link mysqldb:mysqldb robbertvdzon/wildfly
+docker run -d -it -p 8787:8787 -p 9990:9990 -p 8080:8080 --volumes-from wildflydata  --name wildfly --link mysqldb:mysqldb robbertvdzon/wildfly
 
 # apache container
 docker build -t robbertvdzon/apache /workspace/contactdb.v1/docker/apache

@@ -24,11 +24,12 @@ RUN chmod 755 /*.sh
 RUN /config.sh
 
 # Configure /app folder with sample app
-RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
-ADD app/ /initialapp
-RUN chown www-data:www-data /app
-RUN chmod 755 /app
+#RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
+#RUN chown www-data:www-data /app
+#RUN chmod 755 /app
+ADD app/ /var/www/html
+RUN cp -avr /initialapp/* /var/www/html
 
 EXPOSE 80
-WORKDIR /app
+WORKDIR /
 CMD ["/run.sh"]

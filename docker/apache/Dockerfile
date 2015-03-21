@@ -25,7 +25,7 @@ RUN /config.sh
 
 # Configure /app folder with sample app
 RUN mkdir -p /app && rm -fr /var/www/html && ln -s /app /var/www/html
-ADD app/ /app
+COPY app/ /app
 RUN chown www-data:www-data /app
 RUN chmod 755 /app
 

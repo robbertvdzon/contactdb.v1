@@ -1,29 +1,7 @@
 #!/bin/bash
 
-#cp /data/*.jar /opt/wildfly/standalone/deployments
-#cp /data/*.war /opt/wildfly/standalone/deployments
-#sed -i 's/127.0.0.1/0.0.0.0/g' /opt/wildfly/standalone/configuration/standalone.xml
-#rm -f /tmp/add.txt
-#echo ' <datasource jta="false" jndi-name="java:jboss/datasources/MySQLDS" pool-name="MySQLDS" enabled="true" use-ccm="false">' >> /tmp/add.txt
-#echo '                    <connection-url>jdbc:mysql://172.17.0.70:3306/contact</connection-url>' >> /tmp/add.txt
-#echo '                    <driver-class>com.mysql.jdbc.Driver</driver-class>' >> /tmp/add.txt
-#echo '                    <driver>mysql-connector-java-5.1.16.jar</driver>' >> /tmp/add.txt
-#echo '                    <security>' >> /tmp/add.txt
-#echo '                        <user-name>admin</user-name>' >> /tmp/add.txt
-#echo '                        <password></password>' >> /tmp/add.txt
-#echo '                    </security>' >> /tmp/add.txt
-#echo '                    <validation>' >> /tmp/add.txt
-#echo '                        <validate-on-match>false</validate-on-match>' >> /tmp/add.txt
-#echo '                        <background-validation>false</background-validation>' >> /tmp/add.txt
-#echo '                    </validation>' >> /tmp/add.txt
-#echo '                    <statement>' >> /tmp/add.txt
-#echo '                        <share-prepared-statements>false</share-prepared-statements>' >> /tmp/add.txt
-#echo '                    </statement>' >> /tmp/add.txt
-#echo '                </datasource>' >> /tmp/add.txt
-#sed  -i '/<datasources>/r /tmp/add.txt' /opt/wildfly/standalone/configuration/standalone.xml
-#sed -i 's/datasource="java:jboss\/datasources\/ExampleDS"/datasource="java:jboss\/datasources\/MySQLDS"/g' /opt/wildfly/standalone/configuration/standalone.xml
-# tail -f /var/log/wildfly/console.log
-
+# run sshd first
+/usr/sbin/sshd -D &
 
 
 JBOSS_HOME=/opt/wildfly
@@ -81,6 +59,4 @@ fi
 
 echo "=> Restarting WildFly"
 $JBOSS_HOME/bin/$JBOSS_MODE.sh -b 0.0.0.0 -c $JBOSS_CONFIG -bmanagement 0.0.0.0 --debug 8787
-
-#CMD ["/opt/wildfly/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]
 

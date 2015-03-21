@@ -6,7 +6,7 @@ USER root
 
 # for mysql client
 RUN apt-get update
-RUN apt-get install mysql-client-core-5.5
+RUN apt-get install mysql-client-core-5.5 openssh-server
 
 RUN mkdir /data
 COPY contactsbackend-1.0-SNAPSHOT.war /data/contactsbackend-1.0-SNAPSHOT.war
@@ -17,6 +17,19 @@ RUN chmod a+x /data/config.sh
 EXPOSE 8787
 EXPOSE 8080
 EXPOSE 9990
+
+# SSHD, login as root with passwd: admin
+RUN mkdir /var/run/sshd
+RUN echo 'root:admin' | chpasswd
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+
+EXPOSE 22
 
 
 CMD ["/data/config.sh"]

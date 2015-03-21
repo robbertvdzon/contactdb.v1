@@ -15,6 +15,7 @@ RUN apt-get update && \
         php-apc && \
     rm -rf /var/lib/apt/lists/* && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
     sed -i "s/variables_order.*/variables_order = \"EGPCS\"/g" /etc/php5/apache2/php.ini
 
@@ -24,7 +25,7 @@ ADD config.sh /config.sh
 RUN chmod 755 /*.sh
 RUN /config.sh
 
-# Configure /app folder with sample app
+# copy initial html code
 COPY app/ /initialapp
 RUN cp -avr /initialapp/* /var/www/html
 
@@ -32,9 +33,9 @@ EXPOSE 80
 WORKDIR /
 CMD ["/run.sh"]
 
-# SSHD
+# SSHD, login as root with passwd: admin
 RUN mkdir /var/run/sshd
-RUN echo 'root:admindax' | chpasswd
+RUN echo 'root:admin' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login

@@ -23,4 +23,3 @@ docker run -d -it -p 8787:8787 -p 9990:9990 -p 8080:8080 --name wildfly --link m
 
 docker build -t robbertvdzon/apache /workspace/contactdb.v1/docker/apache
 docker run -d -it -p 80:80 --name apache --volumes-from apachedata --link wildfly:wildfly robbertvdzon/apache
-

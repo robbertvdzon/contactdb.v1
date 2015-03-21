@@ -1,11 +1,11 @@
 #!/bin/bash
 
-export DOCKERNAME_SSH = "ssh"
-export DOCKERNAME_APACHE = "apache"
-export DOCKERNAME_WILDFLY = "wildfly"
-export DOCKERNAME_MYSQLDB = "mysqldb"
-export DOCKERNAME_WILDFLYDATA = "wildflydata"
-export DOCKERNAME_APACHEDATA = "apachedata"
+export DOCKERNAME_SSH="ssh"
+export DOCKERNAME_APACHE="apache"
+export DOCKERNAME_WILDFLY="wildfly"
+export DOCKERNAME_MYSQLDB="mysqldb"
+export DOCKERNAME_WILDFLYDATA="wildflydata"
+export DOCKERNAME_APACHEDATA="apachedata"
 
 docker rm -f $DOCKERNAME_SSH
 docker rm -f $DOCKERNAME_APACHE

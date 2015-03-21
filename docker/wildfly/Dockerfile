@@ -1,4 +1,5 @@
 FROM sillenttroll/wildfly-java-8
+MAINTAINER Robbert vd Zon <robbert@vdzon.com>
 
 RUN /opt/wildfly/bin/add-user.sh admin admin --silent
 USER root

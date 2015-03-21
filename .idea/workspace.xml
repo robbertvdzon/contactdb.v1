@@ -2,28 +2,205 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0243e5d9-649f-480e-a30e-5734c3a5e852" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthSecurityInterceptor2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/contactdb.v1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useless_backend/src/main/webapp/WEB-INF/web.-copy1xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/useless_backend/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthSecurityInterceptor.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthSecurityInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthService.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthServiceBean.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/AuthServiceBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/ConfigApplication.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/ConfigApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/Contact.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/Contact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/User.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/UserService.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/UserServiceBean.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/service/UserServiceBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/rest/UsersResource.java" afterPath="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/rest/UsersResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/useless_backend/pom.xml" afterPath="$PROJECT_DIR$/useless_backend/pom.xml" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\cluster_build.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\cluster_remove.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\cluster_restart.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\cluster_start.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\cluster_stop.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\docker.iml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\install_all.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\resources\contact.sql" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\resources\linux-full-install.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\resources\wildfly-install.sh" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\ConfigApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\data\AuthAccessElement.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\data\AuthLoginElement.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\data\Contact.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\data\User.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\mapper\ContactModelMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\mapper\UserModelMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\model\ContactModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\model\UserModel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\rest\AbstractResource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\rest\AuthenticationResource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\rest\ContactsResource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\rest\UsersResource.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\AuthSecurityInterceptor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\AuthSecurityInterceptor2.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\AuthService.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\AuthServiceBean.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\ContactService.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\ContactServiceBean.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\Sleeper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\SleeperImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\UserService.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\java\com\vdzon\samples\uselesscontacts\service\UserServiceBean.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\resources\META-INF\persistence.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\resources\WEB-INF\web--.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\webapp\WEB-INF\web.-copy1xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_backend\src\main\webapp\WEB-INF\web.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\.bowerrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\.editorconfig" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app.zip" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\.buildignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\.htaccess" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\404.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\angular-animate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\angular-animate.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-animate\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\angular-cookies.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\angular-cookies.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\angular-cookies.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-cookies\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-mocks\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-mocks\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-mocks\angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-mocks\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-mocks\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-resource\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-resource\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-resource\angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-resource\angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-resource\angular-resource.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-resource\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-route\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-route\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-route\angular-route.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-route\angular-route.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-route\angular-route.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-route\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-sanitize\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-sanitize\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-sanitize\angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-sanitize\angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-sanitize\angular-sanitize.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-sanitize\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-scenario\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-scenario\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-scenario\angular-scenario.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-scenario\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-scenario\jstd-scenario-adapter-config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-scenario\jstd-scenario-adapter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\angular-touch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\angular-touch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\angular-touch.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular-touch\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\angular-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\angular.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\angular.min.js.gzip" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\angular\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\CHANGES" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\CONTRIBUTORS.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\component.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\es5-sham.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\es5-sham.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\es5-sham.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\es5-shim.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\es5-shim.map" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\es5-shim.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\es5-shim\shims.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\CHANGELOG.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\lib\json3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\bower_components\json3\lib\json3.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\images\yeoman.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\app.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\authFactory.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\authHttpRequestInterceptor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\config.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\contactsController.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\domainService.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\httpRequestInterceptor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\loginController.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\mainController.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\scripts\controllers\menuController.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\styles\main.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\views\contacts.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\views\login.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\app\views\main.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\css\maven-base.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\css\maven-theme.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\css\print.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\css\site.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\dependency-convergence.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\dependency-info.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\distribution-management.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\collapsed.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\expanded.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\external.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\icon_error_sml.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\icon_info_sml.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\icon_success_sml.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\icon_warning_sml.gif" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\logos\build-by-maven-black.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\logos\build-by-maven-white.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\logos\maven-feather.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\images\newwindow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\index.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\plugin-management.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\plugins.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\project-info.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\target\site\project-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\about.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\competition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\game.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\login.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\main.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\mainmenu.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\speelschema.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\team.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\useless_frontend\test\spec\controllers\uitslagen.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="contactdb.v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +223,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="User.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/User.java">
+      <file leaf-file-name="ContactsResource.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5868597" vertical-offset="0" max-vertical-offset="952">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.36129755" vertical-offset="884" max-vertical-offset="2669">
+              <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UsersResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/UsersResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="1003">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthenticationResource.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/AuthenticationResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,6 +267,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java" />
       </list>
     </option>
   </component>
@@ -105,6 +303,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,24 +332,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="useless_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contactdb.v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contactdb.v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="useless_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -162,10 +343,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="contactdb.v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="useless_backend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -184,10 +361,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="contactdb.v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="useless_backend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -229,10 +402,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="useless_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -261,14 +430,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
+              <option name="myItemId" value="rest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,19 +484,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -354,6 +509,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -429,28 +597,29 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -472,11 +641,31 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/useless_backend/src/main/java/com/vdzon/samples/uselesscontacts/data/User.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/UsersResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5868597" vertical-offset="0" max-vertical-offset="952">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="109" max-vertical-offset="1003">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/AuthenticationResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="894">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36129755" vertical-offset="884" max-vertical-offset="2669">
+          <caret line="98" column="36" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
           <folding />
         </state>
       </provider>

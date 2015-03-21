@@ -5,6 +5,7 @@ MAINTAINER Robbert vd Zon <robbert@vdzon.com>
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
         openssh-server \
+        unzip \
         curl \
         apache2 \
         libapache2-mod-php5 \

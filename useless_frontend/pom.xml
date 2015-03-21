@@ -32,7 +32,7 @@
     <distributionManagement>
         <site>
             <id>robbertvdzon.website</id>
-            <url>scp://192.168.178.26/tmp</url>
+            <url>scp://192.168.178.26:1122/var/www/html</url>
         </site>
     </distributionManagement>
 

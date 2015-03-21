@@ -1,13 +1,14 @@
 FROM sillenttroll/wildfly-java-8
 
+RUN /opt/wildfly/bin/add-user.sh admin admin --silent
+USER root
+
 # for mysql client
 RUN apt-get update && \
-    apt-get -yq install \
+    apt-get -y install \
     mysql-client-core-5.5 \
     openssh-server
 
-RUN /opt/wildfly/bin/add-user.sh admin admin --silent
-USER root
 
 RUN mkdir /data
 COPY contactsbackend-1.0-SNAPSHOT.war /data/contactsbackend-1.0-SNAPSHOT.war

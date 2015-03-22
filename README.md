@@ -12,204 +12,239 @@ Workshop: Building a contact database (note: project is in progress!!)
 contact database and deployment to a linux server in the cloud...
  
 
-
-Step 1: Setting up devel system and server
+Step 1: Setting up ubuntu server for running, deploying an debugging
 ------------------------------------------
 
-Setting up a developer machine Configure a developer system
+Setting op an ubuntu server. On this server we will run mysql for running the database, wildfly for running the
+backend and apache for hosting the static web files.
 
--   Install JDK1.8 (insall/java\_home/set path): see xxxx  
+
+First: install Docker, git and clone the source:
+
+    # install docker 
+	apt-get update
+	apt-get install docker.io
+
+	# update to the latest version (needed to use the 'exec' command) 
+    curl -sSL https://get.docker.com/ubuntu | sudo sh    
+
+	# clone the sources
+    mkdir /workspace    
+    cd /workspace    
+    git clone https://github.com/robbertvdzon/contactdb.v1.git
     
 
--   Install and configure WAMP: see xxxx  
-    
 
--   Install Intellij: see xxxxx  
-    
+Next: build and start the three docker containers:
 
--   Install and configure Wildfly: see
-    <http://robbertvdzon.blogspot.nl/2014/11/wildfly-configureren.html>
+	cd /workspace/contactdb.v1/docker
+	./cluster_build.sh
 
--   Install and configure WAMP: see xxxx
+The three docker containers work together as a cluster.
+To stop, start and remove the docker containers, use the following commands:
 
--   Install Bower and Angular: see xxx  
-    
-
--   Get the source (clone github so you can update the code or use my sample
-    code)
-
-**Installatie op debian server:**  
-To run the code on a real server on the web, you can get a debian server in the
-cloud (e.g. at xxx for xx ct a day, see xxx)  
-On a clean debian installation, perform the following steps to install and
-configure the system. After installation the server will contain apache to host
-the static pages, wildfly to host the backend and mySQL as the database.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-cd /tmp
-wget https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/resources/linux-full-install.sh
-sh /tmp/linux-full-install.sh
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-todo: how update git when changes are pushed
-todo: how to deploy these changes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
-
-**Easy server commands and urls:**  
+	./cluster_stop.sh 
+	./cluster_start.sh 
+	./cluster_remote.sh 
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tail -f /var/log/wildfly/console.log
-service wildfly restart
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+All containers have sshd running, so it is possible to ssh to any of the containers directly to copy files or to monitor the system. The ssh ports of the containers are available on the ubuntu host under differente ports: 
 
- 
+	apache container: port 1122 (login as root/admin)
+	wildfly container: port 1222 (login as root/admin)
+	mysql container: port 1322 (login as root/admin)
 
-phpmyadmin: http://[ip]:888  
-wildfly console: http://[ip]:9990 (user=admin/passwd=admin / lokaal is het
-passwd: admin)
+The following web en debug ports are created on the host:
 
-Step 2: Developing the backend
+	#apache, which is running the application
+	http://192.168.178.26:1080
+
+	#phpmyadmin: login as root with no passwd
+	http://192.168.178.26:1081/phpmyadmin
+
+	#the wildfly console, login as admin/admin
+	http://192.168.178.26:1090/console/App.html
+
+Besides these (web) ports, the followings are also created:
+
+	the wildfly debug port: port 1087
+	the wildfly application: port 1088
+
+Step 3: Test the application
+------------------------------------------
+Open a browser and go to: `http://ubuntuserver:1080`
+
+
+Step 4: Setting up a development system 
+------------------------------------------
+
+Setting up a developer machine Configure a developer system on windows.
+We will use windows to develop on. We deploy, debug en test the application on the ubuntu server.
+
+-   Install JDK1.8, git, maven and intellij : see blog xxxx (todo)
+
+Clone the source
+
+    mkdir /workspace    
+    cd /workspace    
+    git clone https://github.com/robbertvdzon/contactdb.v1.git
+
+Update the local settings.xml file with the properties for the docker containers: 
+	
+	<?xml version="1.0" encoding="UTF-8"?>
+	<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	    <profiles>
+	        <profile>
+	            <id>local</id>
+	            <properties>
+	                <!-- properties for deploy to wildfly -->
+	                <wildfly-hostname>localhost</wildfly-hostname>
+	                <wildfly-port>9990</wildfly-port>
+	                <wildfly-username>admin</wildfly-username>
+	                <wildfly-password>admin</wildfly-password>
+	                <!-- skip uploading to apache -->
+	                <skip-apache-scp>true</skip-apache-scp>
+	            </properties>
+	        </profile>
+	        <profile>
+	            <id>remote</id>
+	            <properties>
+	                <!-- properties for deploy to wildfly -->
+	                <wildfly-hostname>192.168.178.26</wildfly-hostname>
+	                <wildfly-port>1090</wildfly-port>
+	                <wildfly-username>admin</wildfly-username>
+	                <wildfly-password>admin</wildfly-password>
+	                <!-- enabled uploading to apache -->
+	                <skip-apache-scp>false</skip-apache-scp>
+	                <!-- properties for uploading to apache -->
+	                <apache-scp-user>root</apache-scp-user>
+	                <apache-scp-passwd>admin</apache-scp-passwd>
+	                <apache-scp-host>192.168.178.26</apache-scp-host>
+	                <apache-scp-wwwdir>/var/www/html</apache-scp-wwwdir>
+	                <apache-scp-port>1122</apache-scp-port>
+	            </properties>
+	        </profile>
+	    </profiles>
+	</settings>
+
+
+Use the following command to compile, deploy and upload:
+
+	# deploy the project to the wildfly docker container
+	mvn install wildfly:deploy -P remote
+	
+	# scp the static files (html/javascript files) directly to apache docker container
+	mvn install -P remote
+
+
+Step 5: Developing the frontend
 ------------------------------
 
-**Add plugin in pom.xml to deploy to wildfly:**  
-add to pom:  
+First: install Bower and Angular: see xxx
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-org.wildfly.plugins
-wildfly-maven-plugin
-1.0.2.Final 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-om te deployen naar wildfly: mvn wildfly:deploy
-
-**Authenticatie:**  
-http://www.aschua.de/blog/pairing-angularjs-and-javaee-for-authentication/  
-Let op!  
-Nu bewaar in de token in een hashtable. Dit moet per sessie. En meer secure.  
-Ook kan iedereen nu gewoon de header aanpassen en de authID (=userID) aanpassen.  
-Ook controleer ik helemaal niet of de token wel klopt en of hij wel van de
-originele browser afkomt.
-
-**frontend en backend:**  
-De frontend draait op poort 80 en de backend op poort 8080!  
-De frontend kan dus op een apache of andere web server draaien terwijl de
-backend op een application server draait!  
-Ook kan de frontend een apart project zijn!
 
 **AngularJS project maken:**  
-(deze tutoriam lis goed: https://www.youtube.com/watch?v=gKiaLSJW5xI)  
-Installatie:  
-install NodeJS
+(use this tuturial: https://www.youtube.com/watch?v=gKiaLSJW5xI)  
 
- 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# npm install --global yo bower grunt-cli
-# yo --version && bower --version && grunt --version
-# npm install --global generator-angular@0.9.2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	# npm install --global yo bower grunt-cli
+	# yo --version && bower --version && grunt --version
+	# npm install --global generator-angular@0.9.2
 
  
 
 **Maak nieuw project:**  
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# yo angular  (maak project zonder Compass en Bootstrap,geen idee wat dat is)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+	# yo angular  (maak project zonder Compass en Bootstrap,geen idee wat dat is)
  
 
 Pas bower aan zodat deze in de apps folder staan (anders kan Apache ze niet
 vinden) edit .bowerrc :  
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-{
-"directory": "app\bower_components"
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	{
+	"directory": "app\bower_components"
+	}
 
  
 
 run daarna:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-bower install
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	bower install
+
+ 
+(the bower folder is added in the apps folder)
+
+**Create new module:**
+
+	yo angular:route game
+	yo angular:route team
+	yo angular:route competition
+	In dex index.html: maak links aan naar die pagina’s
 
  
 
-(nu wordt de bower folder in de apps gezet)
+**Add new angular test code:**
 
-**Maak een nieuwe modules aan:**
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-yo angular:route game
-yo angular:route team
-yo angular:route competition
-In dex index.html: maak links aan naar die pagina’s
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
- 
-
-**Voeg eerste angular testcode toe:**
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-<script>
-function HelloController($scope) {
-    $scope.greeting = { text: 'Hello' };
-}
-
-function teams2Controller($scope,$http) {
-   $http.get("http://localhost/api/resources/teams/all").
-    success(function(response) {$scope.teams = response;});
-}
-</script>
-
-<div ng-controller='HelloController'><p>
-{{greeting.text}}, World</p>
-</div>
-
-<div ng-controller='HelloController'>
-<input ng-model='greeting.text'>
-<p>{{greeting.text}}, World</p>
-</div>
-
-<div ng-app="" ng-controller="teams2Controller">
-<table>
-<tr ng-repeat="x in teams">
-<td>
-    {{ x.id }}
-</td>
-<td>
-{{ x.teamname }}
-</td>
-</table>
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	<script>
+	function HelloController($scope) {
+	    $scope.greeting = { text: 'Hello' };
+	}
+	
+	function teams2Controller($scope,$http) {
+	   $http.get("http://localhost/api/resources/teams/all").
+	    success(function(response) {$scope.teams = response;});
+	}
+	</script>
+	
+	<div ng-controller='HelloController'><p>
+	{{greeting.text}}, World</p>
+	</div>
+	
+	<div ng-controller='HelloController'>
+	<input ng-model='greeting.text'>
+	<p>{{greeting.text}}, World</p>
+	</div>
+	
+	<div ng-app="" ng-controller="teams2Controller">
+	<table>
+	<tr ng-repeat="x in teams">
+	<td>
+	    {{ x.id }}
+	</td>
+	<td>
+	{{ x.teamname }}
+	</td>
+	</table>
 
  
 
-**VOORBEELD:Voeg library toe aan project (hoeft niet want worden niet
-gebruikt):**
+**Example how to add a library to the project:**
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-bower search backbone
-bower install backbone --save
-bower list
-bower update
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	bower search backbone
+	bower install backbone --save
+	bower list
+	bower update
 
  
 
-Step 3: Developing the frontend
+Step 6: Developing the backend
 -------------------------------
 
- 
+
+**Authenticatie:**
+http://www.aschua.de/blog/pairing-angularjs-and-javaee-for-authentication/
+Let op!
+Nu bewaar in de token in een hashtable. Dit moet per sessie. En meer secure.
+Ook kan iedereen nu gewoon de header aanpassen en de authID (=userID) aanpassen.
+Ook controleer ik helemaal niet of de token wel klopt en of hij wel van de
+originele browser afkomt.
+
+Wishlist
+-------------------------------
+
 
  

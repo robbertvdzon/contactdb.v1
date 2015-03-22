@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 
 RUN mkdir /data
-COPY *.war /data/*.war
+COPY *.war /data/
 COPY config.sh /data/config.sh
 COPY mysql-connector-java-5.1.33-bin.jar /data/mysql-connector-java-5.1.33-bin.jar
 RUN chmod a+x /data/config.sh

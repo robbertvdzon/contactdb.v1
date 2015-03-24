@@ -1,15 +1,15 @@
-Workshop: Building a contact database (note: project is in progress!!)
+Workshop: Building a contact database
 ======================================================================
 
-### Using: JEE7, Java8, Wildfly, MySQL, AngularJS
+### Using: JEE7, Java8, Wildfly, MySQL, AngularJS, Docker
 
  
 
 **Creation date:** 26-dec-2014  
-**Last modification date:** 22-maart-2015  
-**Keywords:** JEE7, Java8, JPA, .....  
+**Last modification date:** 42-maart-2015
+**Keywords:** JEE7, Java8, JPA, Angular, Docker,
 **Description:** Complete workshop for setting up a develop systes, developing a
-contact database and deployment to a linux server in the cloud...
+contact database and deployment to a group of docker containers.
  
 
 Step 1: Setting up ubuntu server for running, deploying an debugging

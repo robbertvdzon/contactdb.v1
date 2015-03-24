@@ -2,94 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0243e5d9-649f-480e-a30e-5734c3a5e852" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\WEB-INF\jboss-web.xm" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\angular-animate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\angular-animate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\angular-animate.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-animate\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\angular-cookies.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\angular-cookies.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\angular-cookies.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-cookies\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-mocks\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-mocks\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-mocks\angular-mocks.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-mocks\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-mocks\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-resource\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-resource\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-resource\angular-resource.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-resource\angular-resource.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-resource\angular-resource.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-resource\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-route\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-route\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-route\angular-route.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-route\angular-route.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-route\angular-route.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-route\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-sanitize\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-sanitize\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-sanitize\angular-sanitize.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-sanitize\angular-sanitize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-sanitize\angular-sanitize.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-sanitize\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-scenario\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-scenario\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-scenario\angular-scenario.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-scenario\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-scenario\jstd-scenario-adapter-config.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-scenario\jstd-scenario-adapter.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\angular-touch.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\angular-touch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\angular-touch.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular-touch\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\angular-csp.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\angular.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\angular.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\angular.min.js.gzip" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\angular.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\angular\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\CHANGES" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\CONTRIBUTORS.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\component.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\es5-sham.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\es5-sham.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\es5-sham.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\es5-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\es5-shim.map" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\es5-shim.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\es5-shim\shims.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\.bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\bower.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\lib\json3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\docker\apache\app\bower_components\json3\lib\json3.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker/wildfly/contactsbackend-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/docker/wildfly/contactsbackend-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docker/apache/app/views/main.html" afterPath="$PROJECT_DIR$/docker/apache/app/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/main.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\src\main\webapp\WEB-INF\web.-copy1xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="contactdb.v1.iws" />
@@ -116,8 +29,8 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.030909091" vertical-offset="187" max-vertical-offset="3179">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.031657357" vertical-offset="238" max-vertical-offset="4352">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -443,6 +356,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="979" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -587,6 +501,9 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="0243e5d9-649f-480e-a30e-5734c3a5e852" name="Default" comment="" />
@@ -596,8 +513,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -616,7 +533,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25586355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -740,14 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.-copy1xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
@@ -846,8 +755,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030909091" vertical-offset="187" max-vertical-offset="3179">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.031657357" vertical-offset="238" max-vertical-offset="4352">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>

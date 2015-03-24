@@ -6,7 +6,7 @@ Workshop: Building a contact database (note: project is in progress!!)
  
 
 **Creation date:** 26-dec-2014  
-**Last modification date:** 01-maart-2015  
+**Last modification date:** 22-maart-2015  
 **Keywords:** JEE7, Java8, JPA, .....  
 **Description:** Complete workshop for setting up a develop systes, developing a
 contact database and deployment to a linux server in the cloud...
@@ -142,109 +142,26 @@ Use the following command to compile, deploy and upload:
 Step 5: Developing the frontend
 ------------------------------
 
-First: install Bower and Angular: see xxx
+(this section needs to be created yet)
 
-
-
-**AngularJS project maken:**  
-(use this tuturial: https://www.youtube.com/watch?v=gKiaLSJW5xI)  
-
-	# npm install --global yo bower grunt-cli
-	# yo --version && bower --version && grunt --version
-	# npm install --global generator-angular@0.9.2
-
- 
-
-**Maak nieuw project:**  
-
-
-	# yo angular  (maak project zonder Compass en Bootstrap,geen idee wat dat is)
- 
-
-Pas bower aan zodat deze in de apps folder staan (anders kan Apache ze niet
-vinden) edit .bowerrc :  
-
-
-	{
-	"directory": "app\bower_components"
-	}
-
- 
-
-run daarna:
-
-	bower install
-
- 
-(the bower folder is added in the apps folder)
-
-**Create new module:**
-
-	yo angular:route game
-	yo angular:route team
-	yo angular:route competition
-	In dex index.html: maak links aan naar die pagina’s
-
- 
-
-**Add new angular test code:**
-
-	<script>
-	function HelloController($scope) {
-	    $scope.greeting = { text: 'Hello' };
-	}
-	
-	function teams2Controller($scope,$http) {
-	   $http.get("http://localhost/api/resources/teams/all").
-	    success(function(response) {$scope.teams = response;});
-	}
-	</script>
-	
-	<div ng-controller='HelloController'><p>
-	{{greeting.text}}, World</p>
-	</div>
-	
-	<div ng-controller='HelloController'>
-	<input ng-model='greeting.text'>
-	<p>{{greeting.text}}, World</p>
-	</div>
-	
-	<div ng-app="" ng-controller="teams2Controller">
-	<table>
-	<tr ng-repeat="x in teams">
-	<td>
-	    {{ x.id }}
-	</td>
-	<td>
-	{{ x.teamname }}
-	</td>
-	</table>
-
- 
-
-**Example how to add a library to the project:**
-
-	bower search backbone
-	bower install backbone --save
-	bower list
-	bower update
-
- 
 
 Step 6: Developing the backend
 -------------------------------
 
+(this section needs to be created yet)
 
-**Authenticatie:**
-http://www.aschua.de/blog/pairing-angularjs-and-javaee-for-authentication/
-Let op!
-Nu bewaar in de token in een hashtable. Dit moet per sessie. En meer secure.
-Ook kan iedereen nu gewoon de header aanpassen en de authID (=userID) aanpassen.
-Ook controleer ik helemaal niet of de token wel klopt en of hij wel van de
-originele browser afkomt.
 
-Wishlist
+Wishlist:
 -------------------------------
+**Authenticatie:**
+We store the token in a hashtable, this must be done per session and more secure. Perhaps we also need to store the tokens in the database.
+I think anyone can adjust the header and change the authID (=userID). I also do not check if the token belongs to the original browser.
+
+**Datastore:**
+Currently, we change the ExampleDS configuration in wildfly to use mysql. 
+Perhaps we can configure a second datastore and use that in our backend.
 
 
- 
+**Data container:**
+We need to use a data container for the mysql docker container.
+

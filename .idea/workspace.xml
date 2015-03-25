@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0243e5d9-649f-480e-a30e-5734c3a5e852" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\src\main\java\com\vdzon\samples\uselesscontacts\service\Sleeper.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\workspace\contactdb.v1\src\main\java\com\vdzon\samples\uselesscontacts\service\SleeperImpl.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java" />
     </list>
     <ignored path="contactdb.v1.iws" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="ContactsResource.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6458333" vertical-offset="1549" max-vertical-offset="2125">
+              <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1676#1677#0" expanded="true" />
@@ -996,8 +994,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/vdzon/samples/uselesscontacts/rest/ContactsResource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2125">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6458333" vertical-offset="1549" max-vertical-offset="2125">
+          <caret line="113" column="50" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1676#1677#0" expanded="true" />

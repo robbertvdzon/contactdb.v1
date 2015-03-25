@@ -57,7 +57,7 @@ public class ContactsResource extends AbstractResource{
         System.out.println("\n\n\n GET CONTACTS USING FUTURES \n\n\n\n");
         if (!checkAuth ("root",headers)){
             response.resume(new WebApplicationException(FORBIDDEN));
-
+            return;
 //            return Response.status(403).type("text/plain").entity("Geen toegang!!").build();
         }
         long userId = Long.parseLong(headers.getHeaderString(AuthAccessElement.PARAM_AUTH_ID));

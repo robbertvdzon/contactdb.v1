@@ -9,11 +9,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.IOException;
 import java.util.UUID;
 
-/**
- * Simple entity.
- *
- * @author Roberto Cortez
- */
 @XmlRootElement
 @Entity
 @Table(name = "contacts")

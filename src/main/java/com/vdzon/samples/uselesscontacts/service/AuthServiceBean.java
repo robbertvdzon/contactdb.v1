@@ -17,7 +17,6 @@ public class AuthServiceBean implements AuthService {
     @EJB
     UserService userService;
 
-
     private static Map<String,AuthAccessElement> tokens = new HashMap<>();
 
     @Override

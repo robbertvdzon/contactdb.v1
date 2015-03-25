@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name mswFrontendApp.controller:GameCtrl
- * @description
- * # ContactsCtrl
- * Controller of the mswFrontendApp
- */
 angular.module('mswFrontendApp')
 
     .controller('ContactsCtrl', ['$scope', '$rootScope', 'domainService', '$http', function ($scope, $rootScope, domainService, $http) {

@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name mswFrontendApp.controller:LoginCtrl
- * @description
- * # DomainModelCtrl
- * Controller of the mswFrontendApp
- */
 angular.module('mswFrontendApp')
     .factory('domainService', ['$rootScope', '$http', function ($rootScope, $http) {
         var sharedService = {};

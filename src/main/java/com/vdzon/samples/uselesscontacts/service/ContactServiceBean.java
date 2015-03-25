@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.UUID;
 
 
-/**
- * Created by robbert on 1-11-2014.
- */
 @Stateless(name = "TeamService")
 public class ContactServiceBean implements ContactService {
 
@@ -24,7 +21,7 @@ public class ContactServiceBean implements ContactService {
     }
 
     public Contact getContact(UUID uuid) {
-        return (Contact)entityManager.createQuery("SELECT c FROM Contact c WHERE uuid= :uuid").setParameter("uuid", uuid).getSingleResult();
+        return (Contact) entityManager.createQuery("SELECT c FROM Contact c WHERE uuid= :uuid").setParameter("uuid", uuid).getSingleResult();
     }
 
     public void deleteContact(UUID uuid) {

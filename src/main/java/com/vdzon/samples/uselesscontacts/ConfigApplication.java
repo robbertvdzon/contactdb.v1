@@ -5,7 +5,6 @@ import com.vdzon.samples.uselesscontacts.rest.AuthenticationResource;
 import com.vdzon.samples.uselesscontacts.rest.ContactsResource;
 import com.vdzon.samples.uselesscontacts.rest.UsersResource;
 import com.vdzon.samples.uselesscontacts.service.AuthSecurityInterceptor;
-import com.vdzon.samples.uselesscontacts.service.AuthSecurityInterceptor2;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -21,7 +20,7 @@ public class ConfigApplication extends Application {
         s.add(ContactsResource.class);
         s.add(AuthenticationResource.class);
         s.add(UsersResource.class);
-        s.add(AuthSecurityInterceptor2.class);
+        s.add(AuthSecurityInterceptor.class);
         return s;
     }
 }

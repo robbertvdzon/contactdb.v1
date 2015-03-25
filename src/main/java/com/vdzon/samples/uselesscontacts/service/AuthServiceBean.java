@@ -22,7 +22,6 @@ public class AuthServiceBean implements AuthService {
 
     @Override
     public AuthAccessElement login(AuthLoginElement loginElement) {
-//        User user = userService.findByUsernameAndPassword(loginElement.getUsername(), loginElement.getPasswd());
         User user = userService.findUser(loginElement.getUsername(), loginElement.getPassword());
         if (user != null) {
             String token = UUID.randomUUID().toString();
@@ -35,15 +34,6 @@ public class AuthServiceBean implements AuthService {
 
     @Override
     public boolean isAuthorized(String authId, String authToken, Set<String> rolesAllowed){
-        //TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        boolean autoLogin = true;//TODO: DIT MOET NATUURLIJK WEG !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        if (autoLogin){
-            return true;
-        }
-
-
-
         AuthAccessElement authAccessElement = tokens.get(authToken);
         if (authAccessElement==null) return false;
         for (String roleAllowed:rolesAllowed){

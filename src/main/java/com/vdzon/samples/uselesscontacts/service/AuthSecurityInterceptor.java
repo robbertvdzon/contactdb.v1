@@ -2,132 +2,76 @@ package com.vdzon.samples.uselesscontacts.service;
 
 import com.vdzon.samples.uselesscontacts.data.AuthAccessElement;
 
-import javax.annotation.Priority;
-import javax.annotation.security.RolesAllowed;
-import javax.ejb.EJB;
-import javax.servlet.http.HttpServletRequest;
-import javax.ws.rs.Priorities;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.PreMatching;
-import javax.ws.rs.container.ResourceInfo;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.SecurityContext;
-import javax.ws.rs.ext.Provider;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.security.Principal;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.StringTokenizer;
+
+import javax.annotation.security.DenyAll;
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
+import javax.ejb.EJB;
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerRequestFilter;
+import javax.ws.rs.core.MultivaluedMap;
+import javax.ws.rs.ext.Provider;
+
+import org.jboss.resteasy.core.Headers;
+import org.jboss.resteasy.core.ResourceMethodInvoker;
+import org.jboss.resteasy.core.ServerResponse;
+import org.jboss.resteasy.util.Base64;
 
 @Provider
-@PreMatching
-@Priority(Priorities.AUTHENTICATION)
 public class AuthSecurityInterceptor implements ContainerRequestFilter {
-
-    //http://www.developerscrappad.com/1814/java/java-ee/rest-jax-rs/java-ee-7-jax-rs-2-0-simple-rest-api-authentication-authorization-with-custom-http-header/
-
-    // 401 - Access denied
-    private static final Response ACCESS_UNAUTHORIZED = Response.status(Response.Status.UNAUTHORIZED).entity("Not authorized.").build();
+    private static final String AUTHORIZATION_PROPERTY = "Authorization";
+    private static final String AUTHENTICATION_SCHEME = "Basic";
+    private static final ServerResponse ACCESS_DENIED = new ServerResponse("Access denied for this resource", 401, new Headers<Object>());
+    private static final ServerResponse ACCESS_FORBIDDEN = new ServerResponse("Nobody can access this resource", 403, new Headers<Object>());
+    private static final ServerResponse SERVER_ERROR = new ServerResponse("INTERNAL SERVER ERROR", 500, new Headers<Object>());
 
     @EJB
     AuthService authService;
 
-    @Context
-    private HttpServletRequest request;
-
-    @Context
-    private ResourceInfo resourceInfo;
 
     @Override
-    public void filter(final ContainerRequestContext requestContext) throws IOException {
-        System.out.println("\n\n\n\n----------- filter  \n\n\n\n");
+    public void filter(ContainerRequestContext requestContext) {
 
-        requestContext.setSecurityContext(new SecurityContext() {
-            @Override
-            public Principal getUserPrincipal() {
-                System.out.println("\n\n\n\n----------- getUserPrincipal  \n\n\n\n");
-                return new Principal() {
-                    @Override
-                    public String getName() {
-                        return "Joe";
-                    }
-                };
+        ResourceMethodInvoker methodInvoker = (ResourceMethodInvoker) requestContext.getProperty("org.jboss.resteasy.core.ResourceMethodInvoker");
+        Method method = methodInvoker.getMethod();
+        //Access allowed for all
+        if (!method.isAnnotationPresent(PermitAll.class)) {
+            //Access denied for all
+            if (method.isAnnotationPresent(DenyAll.class)) {
+                requestContext.abortWith(ACCESS_FORBIDDEN);
+                return;
             }
 
-            @Override
-            public boolean isUserInRole(String string) {
-                System.out.println("\n\n\n\n----------- isUserInRole  \n\n\n\n");
-                return isAuthenticated(requestContext);
+            //Get request headers
+            final MultivaluedMap<String, String> headers = requestContext.getHeaders();
+
+            //Fetch authorization header
+            String authId = requestContext.getHeaderString(AuthAccessElement.PARAM_AUTH_ID);
+            String authToken = requestContext.getHeaderString(AuthAccessElement.PARAM_AUTH_TOKEN);
+
+            if (authId == null || authId.isEmpty() || authToken == null || authToken.isEmpty()) {
+                requestContext.abortWith(ACCESS_DENIED);
+                return;
             }
 
-            @Override
-            public boolean isSecure() {
-                System.out.println("\n\n\n\n----------- isSecure  \n\n\n\n");
-                return requestContext.getSecurityContext().isSecure();
-            }
+            //Verify user access
+            if (method.isAnnotationPresent(RolesAllowed.class)) {
+                RolesAllowed rolesAnnotation = method.getAnnotation(RolesAllowed.class);
+                Set<String> rolesSet = new HashSet<String>(Arrays.asList(rolesAnnotation.value()));
 
-            @Override
-            public String getAuthenticationScheme() {
-                System.out.println("\n\n\n\n----------- getAuthenticationScheme  \n\n\n\n");
-                return requestContext.getSecurityContext().getAuthenticationScheme();
+                //Is user valid?
+                if (!authService.isAuthorized(authId, authToken, rolesSet)) {
+                    requestContext.abortWith(ACCESS_DENIED);
+                    return;
+                }
             }
-        });
-
-        if (!isAuthenticated(requestContext)) {
-            System.out.println("\n\n\n\n----------- filter  \n\n\n\n");
-            requestContext.abortWith(ACCESS_UNAUTHORIZED);
         }
     }
-
-    private boolean isAuthenticated(final ContainerRequestContext requestContext) {
-        System.out.println("\n\n\n\n----------- isAuthenticated  \n\n\n\n");
-        String authId = requestContext.getHeaderString(AuthAccessElement.PARAM_AUTH_ID);
-        String authToken = requestContext.getHeaderString(AuthAccessElement.PARAM_AUTH_TOKEN);
-        try {
-            // Get method invoked.
-            System.out.println(authId);
-            System.out.println(authToken);
-            System.out.println(requestContext.getMethod());
-            return true;
-//            Method methodInvoked = resourceInfo.getResourceMethod();
-//
-//            if (methodInvoked.isAnnotationPresent(RolesAllowed.class)) {
-//                RolesAllowed rolesAllowedAnnotation = methodInvoked.getAnnotation(RolesAllowed.class);
-//                Set<String> rolesAllowed = new HashSet<>(Arrays.asList(rolesAllowedAnnotation.value()));
-//
-//                if (authService.isAuthorized(authId, authToken, rolesAllowed)) {
-//                    return true;
-//                }
-//                return false;
-//            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return true;
-    }
-
-
-//    @Override
-//    public void filter(ContainerRequestContext requestContext) throws IOException {
-//        // Get AuthId and AuthToken from HTTP-Header.
-//        String authId = requestContext.getHeaderString(AuthAccessElement.PARAM_AUTH_ID);
-//        String authToken = requestContext.getHeaderString(AuthAccessElement.PARAM_AUTH_TOKEN);
-//
-//        // Get method invoked.
-//        Method methodInvoked = resourceInfo.getResourceMethod();
-//
-//        if (methodInvoked.isAnnotationPresent(RolesAllowed.class)) {
-//            RolesAllowed rolesAllowedAnnotation = methodInvoked.getAnnotation(RolesAllowed.class);
-//            Set<String> rolesAllowed = new HashSet<>(Arrays.asList(rolesAllowedAnnotation.value()));
-//
-//            if (authService.isAuthorized(authId, authToken, rolesAllowed)) {
-//                return;
-//            }
-//            requestContext.abortWith(ACCESS_UNAUTHORIZED);
-//        }
-//    }
-
 }

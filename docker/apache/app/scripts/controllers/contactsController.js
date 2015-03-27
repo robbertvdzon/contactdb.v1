@@ -2,7 +2,7 @@
 
 angular.module('mswFrontendApp')
 
-    .controller('ContactsCtrl', ['$scope', '$rootScope', 'domainService', '$http', function ($scope, $rootScope, domainService, $http) {
+    .controller('ContactsCtrl', ['$scope', '$rootScope', 'domainService', 'authFactory', '$http', function ($scope, $rootScope, domainService, authFactory, $http) {
 
         $scope.contacts = [];
         $scope.selectedcontact = {};
@@ -23,7 +23,7 @@ angular.module('mswFrontendApp')
                        $scope.contacts = response;
                        $scope.selectedcontact = [];
                        $scope.newcontact = [];
-               });
+               })
             }
         }
 

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('mswFrontendApp')
-    .factory('authFactory', ['$rootScope', '$http', '$cookies','$location', function ($rootScope, $http, $cookies,$location) {
-
+    .factory('authFactory', ['$rootScope' , '$http', '$cookies','$location', function ($rootScope, $http, $cookies,$location) {
+//    .factory('authFactory', ['$scope', '$rootScope' , '$http', '$cookies','$location', function ($scope, $rootScope, $http, $cookies,$location) {
 
         var authFactory = {
             authData: undefined
@@ -15,6 +15,12 @@ angular.module('mswFrontendApp')
                 authToken: $cookies.authToken,
                 authPermission: $cookies.authPermission
             };
+
+            $rootScope.$on('authenticationFailed', function() {
+                self.logOff();
+                $location.path('login')
+            });
+            var self = this;
         }
 
         authFactory.setAuthData = function (authData) {
@@ -50,6 +56,7 @@ angular.module('mswFrontendApp')
             $cookies.authPermission = undefined;
             $location.path('/')
         };
+
 
 
         authFactory.initialize();

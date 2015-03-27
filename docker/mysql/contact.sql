@@ -42,9 +42,9 @@ CREATE TABLE IF NOT EXISTS `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `userId`, `name`, `email`, `UUID`) VALUES
-(1, 1, 'contact1', 'email1abcooo', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'),
-(4, 1, 'aa', 'ss2', '—	\n-ÎÚOÏº7‰!nÿM'),
-(5, 1, 'y', 'y2', '³[°*x\\JªB\rX$K»');
+(1, 1, 'john', 'john@gmail.com', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'),
+(4, 1, 'cindy', 'cindy@gmail.com', 'ï¿½	\n-ï¿½ï¿½OÏº7ï¿½!nï¿½M'),
+(5, 1, 'peter', 'peter@gmail.com', 'ï¿½[ï¿½*x\\Jï¿½B\rX$Kï¿½');
 
 -- --------------------------------------------------------
 

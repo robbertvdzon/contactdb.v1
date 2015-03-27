@@ -1,18 +1,26 @@
-<p>This is the login view.</p>
 
+<table>
+    <tr>
+        <td>
+            Username:
+        </td>
+        <td>
+            <input ng-model='user.username'>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Password:
+        </td>
+        <td>
+            <input ng-model='user.password'>
+        </td>
+    </tr>
+</table>
 
-<input ng-model='user.username'>
-<input ng-model='user.password'>
+<br><br>
 
 <button ng-click="login(user)">
     Login
 </button>
 
-<p>{{user.username}}, {{user.password}}</p>
-
-<p> permissies:{{authData}}</p>
-
-
-<button ng-click="test()">
-    Test
-</button>

@@ -15,8 +15,17 @@ angular.module('mswFrontendApp')
         }
         return authHttpRequestInterceptor;
     }])
-
-
-
-
-;
+  .factory('httpErrorInterceptor', function($rootScope, $q, $location) {
+    return {
+      'responseError': function(rejection) {
+        // permission denied
+        if(rejection.status === 403) {
+            $rootScope.$broadcast("authenticationFailed");
+        }
+        $q.reject(rejection);
+      }
+    };
+  })
+  .config(function($httpProvider) {
+    $httpProvider.interceptors.push('httpErrorInterceptor');
+});

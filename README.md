@@ -1,16 +1,16 @@
-Workshop: Building a contact database
-======================================================================
+### Building a contact database using AngularJS, REST services, JEE7, Java8, Apache, Wildfly, MySQL and Docker
 
-### Using: JEE7, Java8, Wildfly, MySQL, AngularJS, Docker
 
- 
+----------
+
 
 **Creation date:** 26-dec-2014  
-**Last modification date:** 28-maart-2015
-**Keywords:** JEE7, Java8, Wildfly, JPA, Angular, Apache, Mysql, Docker
-**Description:** Setting up 3 docker images to host a simple contact database using and apache, wildfly and mysql docker image. The contact database is created using java8, rest services and JPA on the backend and angularJS on the frontend.
- 
-Architecture picture:
+**Last modification date:** 28-maart-2015  
+**Keywords:** JEE7, Java8, Wildfly, JPA, Angular, Apache, Mysql, Docker  
+**Description:** Setting up 3 docker images to host a simple contact database using and apache, wildfly and mysql docker image. The contact database is created using java8, rest services and JPA on the backend and angularJS on the frontend.  
+  
+
+**Architecture picture:**
 ![alt tag](https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/contactdatabase1-architecture.png)
 
 Step 1: Setting up ubuntu server for running, deploying an debugging

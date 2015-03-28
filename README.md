@@ -20,6 +20,7 @@ backend and apache for hosting the static web files.
 
 
 You can use the single line full install which will download and run all images:
+
     cd /tmp && wget https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/full_install.sh && sh /tmp/full_install.sh
 
 You can also manually install the packages, get the project and install/run the containers using the following steps

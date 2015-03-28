@@ -7,6 +7,8 @@ angular.module('mswFrontendApp')
         $scope.contacts = [];
         $scope.selectedcontact = {};
         $scope.newcontact = {};
+        $scope.showEditContact = false;
+        $scope.showNewContact = false;
 
 
         $scope.initialize = function () {
@@ -37,6 +39,7 @@ angular.module('mswFrontendApp')
                        $scope.selectedcontact.email = contact.email;
                   }
             }
+            $scope.showEditContact = true;
         }
 
        $scope.save = function () {
@@ -48,6 +51,7 @@ angular.module('mswFrontendApp')
                    function (response) {
                        $scope.reloadContacts(response);
                });
+            $scope.showEditContact = false;
 
         }
 
@@ -62,6 +66,11 @@ angular.module('mswFrontendApp')
                });
         }
 
+       $scope.newContact = function () {
+            $scope.showNewContact = true;
+        }
+
+
        $scope.add = function () {
             var newContact = {};
             newContact.name = $scope.newcontact.name;
@@ -74,8 +83,15 @@ angular.module('mswFrontendApp')
                    function (response) {
                        $scope.reloadContacts(response);
                });
+            $scope.showNewContact = false;
 
         }
+
+       $scope.cancel = function () {
+            $scope.showEditContact = false;
+            $scope.showNewContact = false;
+        }
+
 
        $scope.reloadContacts = function (contacts) {
             $scope.contacts = contacts;

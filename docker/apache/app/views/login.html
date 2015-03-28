@@ -1,4 +1,6 @@
+<h1>Login</h1>
 
+<form ng-submit="login(user)" >
 <table>
     <tr>
         <td>
@@ -13,14 +15,19 @@
             Password:
         </td>
         <td>
-            <input ng-model='user.password'>
+            <input type=password ng-model='user.password'>
         </td>
     </tr>
 </table>
 
-<br><br>
+<br>
 
-<button ng-click="login(user)">
-    Login
-</button>
+<input type="submit" value="Login"/>
+<br>
+<br>
+<small>Note: initial username is 'john' with no password.</small>
+
+</form>
+
+
 

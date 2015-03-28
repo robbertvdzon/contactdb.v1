@@ -1,29 +1,48 @@
 
-@media (min-width:500px){
-    .menu1{
-        display: inline;
-    }
 
-    .menu2{
-        display: none;
-    }
-
+.header {
+    background-color: #00AAFF;
+    layer-background-color: #00AAFF;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
-@media (max-width:499px){
-    .menu1{
-        display: none;
-    }
 
-    .menu2{
-        display: inline;
-    }
+
+.headerTitle {
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 1px;
+    text-align: center;
 }
+
+.menu {
+    background-color: #0088CC;
+    layer-background-color: #0088CC;
+}
+
+.editContact {
+    width:600px;
+    height:140px;
+    position:absolute;
+    top:150px;
+    left:50%;
+    border:2px solid #0088CC;
+    margin:00px auto auto -300px;
+    background: white;
+    padding-top: 0px;
+    padding-left: 20px;
+    background-color: #00AAFF;
+    layer-background-color: #00AAFF;
+}
+
 
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 

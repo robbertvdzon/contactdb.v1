@@ -64,13 +64,13 @@ All containers have sshd running, so it is possible to ssh to any of the contain
 The following web en debug ports are created on the host:
 
 	#apache, which is running the application
-	http://192.168.178.26:1080
+	http://ubuntuserver:1080
 
 	#phpmyadmin: login as root with no passwd
-	http://192.168.178.26:1081/phpmyadmin
+	http://ubuntuserver:1081/phpmyadmin
 
 	#the wildfly console, login as admin/admin
-	http://192.168.178.26:1090/console/App.html
+	http://ubuntuserver:1090/console/App.html
 
 Besides these (web) ports, the followings are also created:
 
@@ -88,7 +88,7 @@ Step 4: Setting up a development system
 Setting up a developer machine Configure a developer system on windows.
 We will use windows to develop on. We deploy, debug en test the application on the ubuntu server.
 
--   Install JDK1.8, git, maven and intellij : see blog xxxx (todo)
+-   Install JDK1.8, git, maven and intellij
 
 Clone the source
 
@@ -149,13 +149,12 @@ Use the following command to compile, deploy and upload:
 Step 5: Developing the frontend
 ------------------------------
 
-(this section needs to be created yet)
-
+The frontend is build using AngularJS.
 
 Step 6: Developing the backend
 -------------------------------
 
-(this section needs to be created yet)
+The backend consists of a set of REST services using java8 and JEE7.
 
 
 Wishlist:

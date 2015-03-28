@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `passwd`, `uuid`) VALUES
 (1, 'robbert', 'robbert', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'),
-(2, 'john', 'pw', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0');
+(2, 'john', 'pw', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0'),
 (3, 'q', 'q', '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

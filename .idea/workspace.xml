@@ -48,8 +48,8 @@
       <file leaf-file-name="contact.sql" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docker/mysql/contact.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7855505" vertical-offset="794" max-vertical-offset="1666">
-              <caret line="87" column="2" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.76605505" vertical-offset="794" max-vertical-offset="1666">
+              <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -1256,8 +1256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/docker/mysql/contact.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7855505" vertical-offset="794" max-vertical-offset="1666">
-          <caret line="87" column="2" selection-start-line="87" selection-start-column="2" selection-end-line="87" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.76605505" vertical-offset="794" max-vertical-offset="1666">
+          <caret line="86" column="54" selection-start-line="86" selection-start-column="54" selection-end-line="86" selection-end-column="54" />
           <folding />
         </state>
       </provider>

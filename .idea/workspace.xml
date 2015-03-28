@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0243e5d9-649f-480e-a30e-5734c3a5e852" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DESCRIPTION.md" afterPath="$PROJECT_DIR$/DESCRIPTION.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="contactdb.v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,8 +69,8 @@
       <file leaf-file-name="DESCRIPTION.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DESCRIPTION.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20383693" vertical-offset="0" max-vertical-offset="834">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.10191847" vertical-offset="0" max-vertical-offset="834">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -890,8 +891,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DESCRIPTION.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20383693" vertical-offset="0" max-vertical-offset="272">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.10191847" vertical-offset="0" max-vertical-offset="834">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>

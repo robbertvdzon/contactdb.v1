@@ -149,12 +149,15 @@ Use the following command to compile, deploy and upload:
 Step 5: Developing the frontend
 ------------------------------
 
-The frontend is build using AngularJS.
+The frontend is build using AngularJS and uses controllers to manage the web page and services to connect to the backend.
 
 Step 6: Developing the backend
 -------------------------------
 
-The backend consists of a set of REST services using java8 and JEE7.
+The backend runs on Wildfly on java8. <br>
+Wildfly uses the RESTEasy implementation of JAX-RS which we use to implement a set of RESTfull web services to implement the API calls to list, update, add and remove contacts.<br>
+The application uses JPA to persist the contacts.
+
 
 
 Wishlist:

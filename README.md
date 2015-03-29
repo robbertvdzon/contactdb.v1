@@ -178,3 +178,5 @@ We need to use a data container for the mysql docker container.
 **Passwords:**
 The passwords are stored as plain text. These needs to be stores encrypted.
 
+<br>
+<br>

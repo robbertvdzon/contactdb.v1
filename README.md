@@ -162,14 +162,14 @@ Wishlist:
 **Authenticatie:**
 We store the token in a hashtable, this must be done per session and more secure. Perhaps we also need to store the tokens in the database.
 I think anyone can adjust the header and change the authID (=userID). I also do not check if the token belongs to the original browser.
-<br>
+<br><br>
 **Datastore:**
 Currently, we change the ExampleDS configuration in wildfly to use mysql. 
 Perhaps we can configure a second datastore and use that in our backend.
-<br>
+<br><br>
 **Data container:**
 We need to use a data container for the mysql docker container.
-<br>
+<br><br>
 **Passwords:**
 The passwords are stored as plain text. These needs to be stores encrypted.
 

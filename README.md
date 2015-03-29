@@ -159,6 +159,8 @@ The backend consists of a set of REST services using java8 and JEE7.
 
 Wishlist:
 -------------------------------
+This reference implementation is not finished yet, the following issues needs to be resolved yet:
+<br><br>
 **Authenticatie:**
 We store the token in a hashtable, this must be done per session and more secure. Perhaps we also need to store the tokens in the database.
 I think anyone can adjust the header and change the authID (=userID). I also do not check if the token belongs to the original browser.

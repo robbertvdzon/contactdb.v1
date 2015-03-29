@@ -10,7 +10,7 @@
 **Description:** Setting up 3 docker images to host a simple contact database using and apache, wildfly and mysql docker image. The contact database is created using java8, rest services and JPA on the backend and angularJS on the frontend.  
   
 
-**Architecture picture:**  <br>  
+**Architecture picture:**  <br>
 ![alt tag](https://raw.githubusercontent.com/robbertvdzon/contactdb.v1/master/contactdatabase1-architecture.png)
 
 Step 1: Setting up ubuntu server for running, deploying an debugging
@@ -162,12 +162,14 @@ Wishlist:
 **Authenticatie:**
 We store the token in a hashtable, this must be done per session and more secure. Perhaps we also need to store the tokens in the database.
 I think anyone can adjust the header and change the authID (=userID). I also do not check if the token belongs to the original browser.
-
+<br>
 **Datastore:**
 Currently, we change the ExampleDS configuration in wildfly to use mysql. 
 Perhaps we can configure a second datastore and use that in our backend.
-
-
+<br>
 **Data container:**
 We need to use a data container for the mysql docker container.
+<br>
+**Passwords:**
+The passwords are stored as plain text. These needs to be stores encrypted.
 

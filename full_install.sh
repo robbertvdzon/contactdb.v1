@@ -2,7 +2,7 @@
 
 # install docker
 apt-get update
-apt-get install docker.io
+apt-get -y install docker.io
 
 # update to the latest version (needed to use the 'exec' command)
 curl -sSL https://get.docker.com/ubuntu | sudo sh
